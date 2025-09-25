@@ -78,7 +78,7 @@ The processor creates features targeting different outage causes:
 - **Compound Risks**: Ice storms, wet/windy combinations, multiple hazards
 - **Temporal Patterns**: Seasonal effects, consecutive extreme days
 
-## 📊 Data Dictionary & Abbreviations
+## Data Dictionary & Abbreviations
 
 ### Core Weather Measurements (NOAA CDO)
 
