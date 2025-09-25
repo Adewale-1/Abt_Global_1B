@@ -1,8 +1,42 @@
+# Core data processing and analysis
 pandas>=1.5.0
 requests>=2.28.0
 numpy>=1.21.0
+
+# Machine learning and modeling  
+scikit-learn>=1.1.0
+scipy>=1.9.0
+
+# Visualization and reporting
 matplotlib>=3.5.0
 seaborn>=0.11.0
-scikit-learn>=1.1.0
+plotly>=5.0.0
+
+# Development and analysis tools
 jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Data storage and serialization
 pyarrow>=10.0.0
+h5py>=3.7.0
+
+# Environment and configuration management
+python-dotenv>=0.19.0
+
+# Concurrent processing (included in Python 3.2+, listed for clarity)
+# concurrent.futures - built-in module
+
+# Logging and monitoring (built-in modules, listed for documentation)
+# logging - built-in module  
+# threading - built-in module
+# time - built-in module
+# pathlib - built-in module
+
+# Optional: Enhanced data validation
+# pandera>=0.13.0  # Uncomment for strict data validation schemas
+
+# Optional: Advanced time series features 
+# tsfresh>=0.19.0  # Uncomment for automated time series feature extraction
+
+# Optional: Parallel processing acceleration
+# dask>=2022.0.0  # Uncomment for distributed computing capabilities

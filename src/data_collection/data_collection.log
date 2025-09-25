@@ -1,0 +1,1026 @@
+2025-09-23 16:58:57,968 - INFO - Starting complete data processing workflow with years: 2019 to 2024
+2025-09-23 16:58:57,968 - INFO - Validating environment configuration...
+2025-09-23 16:58:57,968 - INFO - Environment validation completed successfully
+2025-09-23 16:58:57,968 - INFO - Arguments received - start_year: 2019, end_year: 2024
+2025-09-23 16:58:57,968 - INFO - Starting weather data collection for 2019-2024
+2025-09-23 16:58:57,968 - INFO - Collecting data for 12 counties
+2025-09-23 16:58:57,968 - INFO -   - Harris County, TX (winter_storms_heat_waves)
+2025-09-23 16:58:57,968 - INFO -   - Bexar County, TX (extreme_heat_drought)
+2025-09-23 16:58:57,968 - INFO -   - Miami-Dade County, FL (hurricanes_thunderstorms)
+2025-09-23 16:58:57,968 - INFO -   - Orange County, FL (hurricanes_lightning)
+2025-09-23 16:58:57,968 - INFO -   - Fairfax County, VA (ice_storms_severe_weather)
+2025-09-23 16:58:57,968 - INFO -   - San Diego County, CA (wildfires_psps)
+2025-09-23 16:58:57,968 - INFO -   - San Francisco County, CA (earthquakes_fog)
+2025-09-23 16:58:57,968 - INFO -   - Suffolk County, MA (winter_storms_coastal)
+2025-09-23 16:58:57,968 - INFO -   - New York County, NY (storms_high_density)
+2025-09-23 16:58:57,968 - INFO -   - Cook County, IL (thunderstorms_winter)
+2025-09-23 16:58:57,968 - INFO -   - Fulton County, GA (ice_storms_thunderstorms)
+2025-09-23 16:58:57,968 - INFO -   - King County, WA (wind_storms_flooding)
+2025-09-23 16:58:57,968 - INFO - Sequential collection for 12 counties, years 2019-2024
+2025-09-23 16:58:57,968 - INFO - Total tasks: 72 county-year combinations
+2025-09-23 16:58:57,968 - INFO - Processing County 1/12: Harris County, TX
+2025-09-23 16:58:57,968 - INFO -    Risk Profile: winter_storms_heat_waves
+2025-09-23 16:58:57,968 - INFO -    Year 2019 (1/72) - Starting collection...
+2025-09-23 16:58:57,968 - INFO - Collecting weather data for Harris County, TX - 2019
+2025-09-23 16:59:43,401 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2019-01-01&enddate=2019-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 16:59:43,403 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 17:01:01,893 - INFO - Collected 5252 records for Harris County Q1 2019
+2025-09-23 17:01:43,603 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 17:01:43,604 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 17:02:52,086 - INFO - Collected 4960 records for Harris County Q2 2019
+2025-09-23 17:03:17,025 - INFO - Collected 4857 records for Harris County Q3 2019
+2025-09-23 17:03:58,584 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2019-10-01', 'enddate': '2019-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2019-10-01&enddate=2019-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 17:03:58,586 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 17:05:25,019 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2019-10-01', 'enddate': '2019-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2019-10-01&enddate=2019-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 17:05:25,019 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 17:06:55,312 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2019-10-01', 'enddate': '2019-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2019-10-01&enddate=2019-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 17:06:55,313 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 17:08:25,753 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2019-10-01', 'enddate': '2019-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2019-10-01&enddate=2019-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 17:08:25,753 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 17:09:36,019 - INFO - Collected 4748 records for Harris County Q4 2019
+2025-09-23 17:09:36,167 - INFO - Saved data for Harris County 2019: 19817 raw records, 365 daily features
+2025-09-23 17:09:36,168 - INFO -    Success: 365 daily records collected
+2025-09-23 17:09:36,168 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 17:09:46,173 - INFO -    Year 2020 (2/72) - Starting collection...
+2025-09-23 17:09:46,174 - INFO - Collecting weather data for Harris County, TX - 2020
+2025-09-23 17:10:21,533 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2020-01-01', 'enddate': '2020-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2020-01-01&enddate=2020-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 17:10:21,534 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 17:29:42,307 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2020-01-01', 'enddate': '2020-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 17:29:56,485 - INFO - Collected 4835 records for Harris County Q1 2020
+2025-09-23 17:30:36,331 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2020-04-01', 'enddate': '2020-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2020-04-01&enddate=2020-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 17:30:36,331 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 17:31:34,263 - INFO - Collected 5279 records for Harris County Q2 2020
+2025-09-23 17:31:59,586 - INFO - Collected 5534 records for Harris County Q3 2020
+2025-09-23 17:32:42,612 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 17:32:42,613 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 17:44:15,657 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 17:44:37,781 - INFO - Collected 5758 records for Harris County Q4 2020
+2025-09-23 17:44:37,912 - INFO - Saved data for Harris County 2020: 21406 raw records, 366 daily features
+2025-09-23 17:44:37,914 - INFO -    Success: 366 daily records collected
+2025-09-23 17:44:37,914 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 17:44:47,919 - INFO -    Year 2021 (3/72) - Starting collection...
+2025-09-23 17:44:47,919 - INFO - Collecting weather data for Harris County, TX - 2021
+2025-09-23 17:45:11,242 - INFO - Collected 5412 records for Harris County Q1 2021
+2025-09-23 17:45:38,812 - INFO - Collected 5496 records for Harris County Q2 2021
+2025-09-23 17:46:35,208 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2021-07-01', 'enddate': '2021-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2021-07-01&enddate=2021-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 17:46:35,209 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 18:36:27,891 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2021-07-01', 'enddate': '2021-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out.
+2025-09-23 18:39:06,952 - INFO - Collected 5439 records for Harris County Q3 2021
+2025-09-23 18:39:31,319 - INFO - Collected 5137 records for Harris County Q4 2021
+2025-09-23 18:39:31,444 - INFO - Saved data for Harris County 2021: 21484 raw records, 365 daily features
+2025-09-23 18:39:31,445 - INFO -    Success: 365 daily records collected
+2025-09-23 18:39:31,445 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 18:39:41,451 - INFO -    Year 2022 (4/72) - Starting collection...
+2025-09-23 18:39:41,453 - INFO - Collecting weather data for Harris County, TX - 2022
+2025-09-23 18:40:15,556 - INFO - Collected 5108 records for Harris County Q1 2022
+2025-09-23 18:40:51,765 - INFO - Collected 4924 records for Harris County Q2 2022
+2025-09-23 18:41:29,020 - INFO - Collected 5015 records for Harris County Q3 2022
+2025-09-23 18:41:58,405 - INFO - Collected 5204 records for Harris County Q4 2022
+2025-09-23 18:41:58,552 - INFO - Saved data for Harris County 2022: 20251 raw records, 365 daily features
+2025-09-23 18:41:58,553 - INFO -    Success: 365 daily records collected
+2025-09-23 18:41:58,553 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 18:42:08,558 - INFO -    Year 2023 (5/72) - Starting collection...
+2025-09-23 18:42:08,559 - INFO - Collecting weather data for Harris County, TX - 2023
+2025-09-23 18:42:38,845 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2023-01-01', 'enddate': '2023-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2023-01-01&enddate=2023-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 18:42:38,846 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 18:43:52,162 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2023-01-01', 'enddate': '2023-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2023-01-01&enddate=2023-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 18:43:52,164 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 18:45:10,445 - INFO - Collected 5242 records for Harris County Q1 2023
+2025-09-23 18:45:34,018 - INFO - Collected 5385 records for Harris County Q2 2023
+2025-09-23 18:45:56,651 - INFO - Collected 5138 records for Harris County Q3 2023
+2025-09-23 18:46:42,674 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2023-10-01&enddate=2023-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 18:46:42,675 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 18:48:22,919 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2023-10-01&enddate=2023-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 18:48:22,920 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 18:49:38,809 - INFO - Collected 5106 records for Harris County Q4 2023
+2025-09-23 18:49:38,978 - INFO - Saved data for Harris County 2023: 20871 raw records, 365 daily features
+2025-09-23 18:49:38,980 - INFO -    Success: 365 daily records collected
+2025-09-23 18:49:38,980 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 18:49:48,985 - INFO -    Year 2024 (6/72) - Starting collection...
+2025-09-23 18:49:48,985 - INFO - Collecting weather data for Harris County, TX - 2024
+2025-09-23 18:50:25,188 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48201', 'startdate': '2024-01-01', 'enddate': '2024-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48201&startdate=2024-01-01&enddate=2024-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 18:50:25,189 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 18:51:26,939 - INFO - Collected 5436 records for Harris County Q1 2024
+2025-09-23 18:51:43,547 - INFO - Collected 5329 records for Harris County Q2 2024
+2025-09-23 18:51:59,553 - INFO - Collected 5078 records for Harris County Q3 2024
+2025-09-23 18:52:16,677 - INFO - Collected 4961 records for Harris County Q4 2024
+2025-09-23 18:52:16,799 - INFO - Saved data for Harris County 2024: 20804 raw records, 366 daily features
+2025-09-23 18:52:16,800 - INFO -    Success: 366 daily records collected
+2025-09-23 18:52:16,800 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 18:52:26,803 - INFO -    Completed Harris County - pausing 20 seconds before next county...
+2025-09-23 18:52:46,809 - INFO - Processing County 2/12: Bexar County, TX
+2025-09-23 18:52:46,809 - INFO -    Risk Profile: extreme_heat_drought
+2025-09-23 18:52:46,809 - INFO -    Year 2019 (7/72) - Starting collection...
+2025-09-23 18:52:46,810 - INFO - Collecting weather data for Bexar County, TX - 2019
+2025-09-23 18:53:26,885 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2019-01-01&enddate=2019-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 18:53:26,886 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 18:54:40,309 - INFO - Collected 7438 records for Bexar County Q1 2019
+2025-09-23 18:55:16,413 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 18:55:16,413 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 18:56:23,334 - INFO - Collected 7838 records for Bexar County Q2 2019
+2025-09-23 18:56:47,895 - INFO - Collected 7671 records for Bexar County Q3 2019
+2025-09-23 18:57:08,872 - INFO - Collected 7631 records for Bexar County Q4 2019
+2025-09-23 18:57:09,033 - INFO - Saved data for Bexar County 2019: 30578 raw records, 365 daily features
+2025-09-23 18:57:09,034 - INFO -    Success: 365 daily records collected
+2025-09-23 18:57:09,034 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 18:57:19,039 - INFO -    Year 2020 (8/72) - Starting collection...
+2025-09-23 18:57:19,040 - INFO - Collecting weather data for Bexar County, TX - 2020
+2025-09-23 18:58:08,541 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2020-01-01', 'enddate': '2020-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2020-01-01&enddate=2020-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=6001
+2025-09-23 18:58:08,541 - WARNING - Server error detected, waiting 90 seconds...
+2025-09-23 19:00:13,919 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2020-01-01', 'enddate': '2020-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2020-01-01&enddate=2020-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001
+2025-09-23 19:00:13,919 - WARNING - Server error detected, waiting 110 seconds...
+2025-09-23 19:02:08,425 - INFO - Collected 8016 records for Bexar County Q1 2020
+2025-09-23 19:02:52,796 - INFO - Collected 8595 records for Bexar County Q2 2020
+2025-09-23 19:03:36,875 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2020-07-01', 'enddate': '2020-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2020-07-01&enddate=2020-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 19:03:36,875 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 19:05:07,163 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2020-07-01', 'enddate': '2020-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2020-07-01&enddate=2020-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 19:05:07,163 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 19:06:36,266 - INFO - Collected 8799 records for Bexar County Q3 2020
+2025-09-23 19:07:21,553 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 19:07:21,554 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 19:09:00,395 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 19:09:00,396 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 19:10:34,859 - INFO - Collected 8429 records for Bexar County Q4 2020
+2025-09-23 19:10:35,043 - INFO - Saved data for Bexar County 2020: 33839 raw records, 366 daily features
+2025-09-23 19:10:35,045 - INFO -    Success: 366 daily records collected
+2025-09-23 19:10:35,045 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:10:45,050 - INFO -    Year 2021 (9/72) - Starting collection...
+2025-09-23 19:10:45,051 - INFO - Collecting weather data for Bexar County, TX - 2021
+2025-09-23 19:11:15,439 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2021-01-01', 'enddate': '2021-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2021-01-01&enddate=2021-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 19:11:15,440 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 19:12:15,837 - INFO - Collected 8173 records for Bexar County Q1 2021
+2025-09-23 19:13:01,526 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2021-04-01&enddate=2021-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 19:13:01,527 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 19:14:26,096 - INFO - Collected 8482 records for Bexar County Q2 2021
+2025-09-23 19:14:53,119 - INFO - Collected 8100 records for Bexar County Q3 2021
+2025-09-23 19:15:25,589 - INFO - Collected 8435 records for Bexar County Q4 2021
+2025-09-23 19:15:25,775 - INFO - Saved data for Bexar County 2021: 33190 raw records, 365 daily features
+2025-09-23 19:15:25,776 - INFO -    Success: 365 daily records collected
+2025-09-23 19:15:25,776 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:15:35,781 - INFO -    Year 2022 (10/72) - Starting collection...
+2025-09-23 19:15:35,781 - INFO - Collecting weather data for Bexar County, TX - 2022
+2025-09-23 19:16:00,206 - INFO - Collected 7881 records for Bexar County Q1 2022
+2025-09-23 19:16:30,084 - INFO - Collected 8262 records for Bexar County Q2 2022
+2025-09-23 19:17:00,851 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2022-07-01', 'enddate': '2022-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2022-07-01&enddate=2022-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 19:17:00,851 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 19:18:16,647 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2022-07-01', 'enddate': '2022-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2022-07-01&enddate=2022-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 19:18:16,647 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 19:20:06,887 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2022-07-01', 'enddate': '2022-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2022-07-01&enddate=2022-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 19:20:06,888 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 19:21:38,362 - INFO - Collected 8222 records for Bexar County Q3 2022
+2025-09-23 19:22:04,314 - INFO - Collected 8864 records for Bexar County Q4 2022
+2025-09-23 19:22:04,501 - INFO - Saved data for Bexar County 2022: 33229 raw records, 365 daily features
+2025-09-23 19:22:04,502 - INFO -    Success: 365 daily records collected
+2025-09-23 19:22:04,502 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:22:14,507 - INFO -    Year 2023 (11/72) - Starting collection...
+2025-09-23 19:22:14,508 - INFO - Collecting weather data for Bexar County, TX - 2023
+2025-09-23 19:22:42,395 - INFO - Collected 8851 records for Bexar County Q1 2023
+2025-09-23 19:23:10,738 - INFO - Collected 9913 records for Bexar County Q2 2023
+2025-09-23 19:23:38,000 - INFO - Collected 9228 records for Bexar County Q3 2023
+2025-09-23 19:24:48,465 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 19:25:17,362 - INFO - Collected 9410 records for Bexar County Q4 2023
+2025-09-23 19:25:17,554 - INFO - Saved data for Bexar County 2023: 37402 raw records, 365 daily features
+2025-09-23 19:25:17,555 - INFO -    Success: 365 daily records collected
+2025-09-23 19:25:17,556 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:25:27,561 - INFO -    Year 2024 (12/72) - Starting collection...
+2025-09-23 19:25:27,561 - INFO - Collecting weather data for Bexar County, TX - 2024
+2025-09-23 19:25:52,802 - INFO - Collected 9405 records for Bexar County Q1 2024
+2025-09-23 19:26:20,523 - INFO - Collected 9798 records for Bexar County Q2 2024
+2025-09-23 19:26:46,832 - INFO - Collected 9949 records for Bexar County Q3 2024
+2025-09-23 19:27:33,355 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:48029', 'startdate': '2024-10-01', 'enddate': '2024-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A48029&startdate=2024-10-01&enddate=2024-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=6001
+2025-09-23 19:27:33,355 - WARNING - Server error detected, waiting 90 seconds...
+2025-09-23 19:29:13,025 - INFO - Collected 9079 records for Bexar County Q4 2024
+2025-09-23 19:29:13,223 - INFO - Saved data for Bexar County 2024: 38231 raw records, 366 daily features
+2025-09-23 19:29:13,225 - INFO -    Success: 366 daily records collected
+2025-09-23 19:29:13,225 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:29:23,230 - INFO -    Completed Bexar County - pausing 20 seconds before next county...
+2025-09-23 19:29:43,236 - INFO - Processing County 3/12: Miami-Dade County, FL
+2025-09-23 19:29:43,236 - INFO -    Risk Profile: hurricanes_thunderstorms
+2025-09-23 19:29:43,237 - INFO -    Year 2019 (13/72) - Starting collection...
+2025-09-23 19:29:43,237 - INFO - Collecting weather data for Miami-Dade County, FL - 2019
+2025-09-23 19:30:24,840 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2019-01-01&enddate=2019-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 19:30:24,841 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 19:31:39,260 - INFO - Collected 5561 records for Miami-Dade County Q1 2019
+2025-09-23 19:32:14,985 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 19:32:14,986 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 19:33:41,183 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 19:33:41,185 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 19:34:58,440 - INFO - Collected 6085 records for Miami-Dade County Q2 2019
+2025-09-23 19:35:46,153 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2019-07-01', 'enddate': '2019-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2019-07-01&enddate=2019-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 19:35:46,155 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 19:37:10,707 - INFO - Collected 6164 records for Miami-Dade County Q3 2019
+2025-09-23 19:37:29,901 - INFO - Collected 6016 records for Miami-Dade County Q4 2019
+2025-09-23 19:37:30,047 - INFO - Saved data for Miami-Dade County 2019: 23826 raw records, 365 daily features
+2025-09-23 19:37:30,048 - INFO -    Success: 365 daily records collected
+2025-09-23 19:37:30,048 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:37:40,054 - INFO -    Year 2020 (14/72) - Starting collection...
+2025-09-23 19:37:40,054 - INFO - Collecting weather data for Miami-Dade County, FL - 2020
+2025-09-23 19:37:55,114 - INFO - Collected 5963 records for Miami-Dade County Q1 2020
+2025-09-23 19:44:35,296 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2020-04-01', 'enddate': '2020-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 19:44:51,993 - INFO - Collected 6130 records for Miami-Dade County Q2 2020
+2025-09-23 19:45:13,546 - INFO - Collected 6240 records for Miami-Dade County Q3 2020
+2025-09-23 19:45:35,450 - INFO - Collected 6173 records for Miami-Dade County Q4 2020
+2025-09-23 19:45:35,589 - INFO - Saved data for Miami-Dade County 2020: 24506 raw records, 366 daily features
+2025-09-23 19:45:35,590 - INFO -    Success: 366 daily records collected
+2025-09-23 19:45:35,590 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:45:45,595 - INFO -    Year 2021 (15/72) - Starting collection...
+2025-09-23 19:45:45,596 - INFO - Collecting weather data for Miami-Dade County, FL - 2021
+2025-09-23 19:46:31,695 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2021-01-01', 'enddate': '2021-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2021-01-01&enddate=2021-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 19:46:31,696 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 19:47:54,188 - INFO - Collected 5859 records for Miami-Dade County Q1 2021
+2025-09-23 19:48:30,988 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2021-04-01&enddate=2021-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 19:48:30,991 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 19:49:53,842 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2021-04-01&enddate=2021-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 19:49:53,844 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 19:51:02,676 - INFO - Collected 5736 records for Miami-Dade County Q2 2021
+2025-09-23 19:51:21,886 - INFO - Collected 5741 records for Miami-Dade County Q3 2021
+2025-09-23 19:51:55,322 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2021-10-01', 'enddate': '2021-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2021-10-01&enddate=2021-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 19:51:55,323 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 19:53:05,809 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2021-10-01', 'enddate': '2021-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2021-10-01&enddate=2021-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 19:53:05,811 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 19:53:59,237 - INFO - Collected 5624 records for Miami-Dade County Q4 2021
+2025-09-23 19:53:59,368 - INFO - Saved data for Miami-Dade County 2021: 22960 raw records, 365 daily features
+2025-09-23 19:53:59,369 - INFO -    Success: 365 daily records collected
+2025-09-23 19:53:59,369 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:54:09,374 - INFO -    Year 2022 (16/72) - Starting collection...
+2025-09-23 19:54:09,375 - INFO - Collecting weather data for Miami-Dade County, FL - 2022
+2025-09-23 19:54:25,829 - INFO - Collected 5385 records for Miami-Dade County Q1 2022
+2025-09-23 19:54:42,178 - INFO - Collected 5643 records for Miami-Dade County Q2 2022
+2025-09-23 19:54:59,125 - INFO - Collected 5496 records for Miami-Dade County Q3 2022
+2025-09-23 19:55:36,883 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 19:55:36,886 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 19:57:00,167 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 19:57:00,168 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 19:58:33,760 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 19:58:33,761 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 19:59:49,336 - INFO - Collected 5505 records for Miami-Dade County Q4 2022
+2025-09-23 19:59:49,466 - INFO - Saved data for Miami-Dade County 2022: 22029 raw records, 365 daily features
+2025-09-23 19:59:49,467 - INFO -    Success: 365 daily records collected
+2025-09-23 19:59:49,467 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 19:59:59,471 - INFO -    Year 2023 (17/72) - Starting collection...
+2025-09-23 19:59:59,472 - INFO - Collecting weather data for Miami-Dade County, FL - 2023
+2025-09-23 20:00:21,813 - INFO - Collected 5433 records for Miami-Dade County Q1 2023
+2025-09-23 20:00:42,948 - INFO - Collected 5669 records for Miami-Dade County Q2 2023
+2025-09-23 20:01:18,160 - INFO - Collected 5583 records for Miami-Dade County Q3 2023
+2025-09-23 20:02:12,660 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2023-10-01&enddate=2023-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 20:02:12,661 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 20:03:58,272 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2023-10-01&enddate=2023-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 20:03:58,273 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 20:05:23,207 - INFO - Collected 5483 records for Miami-Dade County Q4 2023
+2025-09-23 20:05:23,339 - INFO - Saved data for Miami-Dade County 2023: 22168 raw records, 365 daily features
+2025-09-23 20:05:23,340 - INFO -    Success: 365 daily records collected
+2025-09-23 20:05:23,340 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 20:05:33,343 - INFO -    Year 2024 (18/72) - Starting collection...
+2025-09-23 20:05:33,343 - INFO - Collecting weather data for Miami-Dade County, FL - 2024
+2025-09-23 20:06:03,621 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2024-01-01', 'enddate': '2024-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2024-01-01&enddate=2024-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 20:06:03,622 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 20:07:03,845 - INFO - Collected 5428 records for Miami-Dade County Q1 2024
+2025-09-23 20:07:28,885 - INFO - Collected 5214 records for Miami-Dade County Q2 2024
+2025-09-23 20:08:04,663 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2024-07-01', 'enddate': '2024-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2024-07-01&enddate=2024-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 20:08:04,664 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 20:09:08,439 - INFO - Collected 5375 records for Miami-Dade County Q3 2024
+2025-09-23 20:09:39,484 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2024-10-01', 'enddate': '2024-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2024-10-01&enddate=2024-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 20:09:39,486 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 20:10:49,935 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12086', 'startdate': '2024-10-01', 'enddate': '2024-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12086&startdate=2024-10-01&enddate=2024-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 20:10:49,936 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 20:11:58,848 - INFO - Collected 5140 records for Miami-Dade County Q4 2024
+2025-09-23 20:11:59,027 - INFO - Saved data for Miami-Dade County 2024: 21157 raw records, 366 daily features
+2025-09-23 20:11:59,028 - INFO -    Success: 366 daily records collected
+2025-09-23 20:11:59,028 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 20:12:09,033 - INFO -    Completed Miami-Dade County - pausing 20 seconds before next county...
+2025-09-23 20:12:29,038 - INFO - Processing County 4/12: Orange County, FL
+2025-09-23 20:12:29,038 - INFO -    Risk Profile: hurricanes_lightning
+2025-09-23 20:12:29,039 - INFO -    Year 2019 (19/72) - Starting collection...
+2025-09-23 20:12:29,039 - INFO - Collecting weather data for Orange County, FL - 2019
+2025-09-23 20:12:38,261 - INFO - Collected 2958 records for Orange County Q1 2019
+2025-09-23 20:13:12,561 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12095&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 20:13:12,563 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 20:14:00,089 - INFO - Collected 3127 records for Orange County Q2 2019
+2025-09-23 20:14:12,271 - INFO - Collected 3386 records for Orange County Q3 2019
+2025-09-23 20:14:24,626 - INFO - Collected 3066 records for Orange County Q4 2019
+2025-09-23 20:14:24,721 - INFO - Saved data for Orange County 2019: 12537 raw records, 365 daily features
+2025-09-23 20:14:24,722 - INFO -    Success: 365 daily records collected
+2025-09-23 20:14:24,722 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 20:14:34,727 - INFO -    Year 2020 (20/72) - Starting collection...
+2025-09-23 20:14:34,727 - INFO - Collecting weather data for Orange County, FL - 2020
+2025-09-23 20:14:42,677 - INFO - Collected 2950 records for Orange County Q1 2020
+2025-09-23 20:14:53,881 - INFO - Collected 3156 records for Orange County Q2 2020
+2025-09-23 20:15:07,040 - INFO - Collected 3474 records for Orange County Q3 2020
+2025-09-23 20:15:18,453 - INFO - Collected 3127 records for Orange County Q4 2020
+2025-09-23 20:15:18,547 - INFO - Saved data for Orange County 2020: 12707 raw records, 366 daily features
+2025-09-23 20:15:18,548 - INFO -    Success: 366 daily records collected
+2025-09-23 20:15:18,548 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 20:15:28,559 - INFO -    Year 2021 (21/72) - Starting collection...
+2025-09-23 20:15:28,559 - INFO - Collecting weather data for Orange County, FL - 2021
+2025-09-23 20:15:39,436 - INFO - Collected 3125 records for Orange County Q1 2021
+2025-09-23 20:16:15,392 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12095&startdate=2021-04-01&enddate=2021-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 20:16:15,393 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 20:17:03,945 - INFO - Collected 3368 records for Orange County Q2 2021
+2025-09-23 20:17:16,423 - INFO - Collected 3556 records for Orange County Q3 2021
+2025-09-23 20:17:28,273 - INFO - Collected 3388 records for Orange County Q4 2021
+2025-09-23 20:17:28,377 - INFO - Saved data for Orange County 2021: 13437 raw records, 365 daily features
+2025-09-23 20:17:28,378 - INFO -    Success: 365 daily records collected
+2025-09-23 20:17:28,378 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 20:17:38,383 - INFO -    Year 2022 (22/72) - Starting collection...
+2025-09-23 20:17:38,384 - INFO - Collecting weather data for Orange County, FL - 2022
+2025-09-23 20:17:48,745 - INFO - Collected 3353 records for Orange County Q1 2022
+2025-09-23 20:18:00,191 - INFO - Collected 3436 records for Orange County Q2 2022
+2025-09-23 20:18:13,560 - INFO - Collected 3661 records for Orange County Q3 2022
+2025-09-23 20:18:44,359 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12095&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 20:18:44,359 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 20:19:47,894 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12095&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 20:19:47,896 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 20:20:36,778 - INFO - Collected 3396 records for Orange County Q4 2022
+2025-09-23 20:20:36,873 - INFO - Saved data for Orange County 2022: 13846 raw records, 365 daily features
+2025-09-23 20:20:36,873 - INFO -    Success: 365 daily records collected
+2025-09-23 20:20:36,873 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 20:20:46,878 - INFO -    Year 2023 (23/72) - Starting collection...
+2025-09-23 20:20:46,879 - INFO - Collecting weather data for Orange County, FL - 2023
+2025-09-23 20:20:59,109 - INFO - Collected 3227 records for Orange County Q1 2023
+2025-09-23 20:21:12,669 - INFO - Collected 3346 records for Orange County Q2 2023
+2025-09-23 20:21:52,657 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2023-07-01', 'enddate': '2023-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12095&startdate=2023-07-01&enddate=2023-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 20:21:52,659 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 20:22:55,106 - INFO - Collected 3425 records for Orange County Q3 2023
+2025-09-23 20:49:52,287 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 20:50:54,686 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 20:51:56,867 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:21:02,202 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:22:04,663 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:22:44,454 - INFO - Collected 3242 records for Orange County Q4 2023
+2025-09-23 22:22:44,549 - INFO - Saved data for Orange County 2023: 13240 raw records, 365 daily features
+2025-09-23 22:22:44,550 - INFO -    Success: 365 daily records collected
+2025-09-23 22:22:44,550 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:22:54,555 - INFO -    Year 2024 (24/72) - Starting collection...
+2025-09-23 22:22:54,556 - INFO - Collecting weather data for Orange County, FL - 2024
+2025-09-23 22:24:06,951 - INFO - Collected 3295 records for Orange County Q1 2024
+2025-09-23 22:25:07,609 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2024-04-01', 'enddate': '2024-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:25:28,630 - INFO - Collected 3193 records for Orange County Q2 2024
+2025-09-23 22:26:24,710 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2024-07-01', 'enddate': '2024-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A12095&startdate=2024-07-01&enddate=2024-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 22:26:24,711 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 22:27:12,258 - INFO - Collected 3326 records for Orange County Q3 2024
+2025-09-23 22:28:13,074 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:12095', 'startdate': '2024-10-01', 'enddate': '2024-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:28:28,617 - INFO - Collected 3057 records for Orange County Q4 2024
+2025-09-23 22:28:28,720 - INFO - Saved data for Orange County 2024: 12871 raw records, 366 daily features
+2025-09-23 22:28:28,721 - INFO -    Success: 366 daily records collected
+2025-09-23 22:28:28,721 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:28:38,727 - INFO -    Completed Orange County - pausing 20 seconds before next county...
+2025-09-23 22:28:58,737 - INFO - Processing County 5/12: Fairfax County, VA
+2025-09-23 22:28:58,740 - INFO -    Risk Profile: ice_storms_severe_weather
+2025-09-23 22:28:58,740 - INFO -    Year 2019 (25/72) - Starting collection...
+2025-09-23 22:28:58,741 - INFO - Collecting weather data for Fairfax County, VA - 2019
+2025-09-23 22:34:53,569 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:35:05,855 - INFO - Collected 2728 records for Fairfax County Q1 2019
+2025-09-23 22:36:06,508 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:36:40,128 - INFO - Collected 2735 records for Fairfax County Q2 2019
+2025-09-23 22:37:40,780 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2019-07-01', 'enddate': '2019-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:38:08,605 - INFO - Collected 2711 records for Fairfax County Q3 2019
+2025-09-23 22:38:43,494 - INFO - Collected 2745 records for Fairfax County Q4 2019
+2025-09-23 22:38:43,571 - INFO - Saved data for Fairfax County 2019: 10919 raw records, 365 daily features
+2025-09-23 22:38:43,572 - INFO -    Success: 365 daily records collected
+2025-09-23 22:38:43,572 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:38:53,577 - INFO -    Year 2020 (26/72) - Starting collection...
+2025-09-23 22:38:53,578 - INFO - Collecting weather data for Fairfax County, VA - 2020
+2025-09-23 22:39:53,776 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2020-01-01', 'enddate': '2020-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:40:18,424 - INFO - Collected 2741 records for Fairfax County Q1 2020
+2025-09-23 22:40:55,815 - INFO - Collected 3006 records for Fairfax County Q2 2020
+2025-09-23 22:41:21,587 - INFO - Collected 3231 records for Fairfax County Q3 2020
+2025-09-23 22:42:08,021 - INFO - Collected 3261 records for Fairfax County Q4 2020
+2025-09-23 22:42:08,109 - INFO - Saved data for Fairfax County 2020: 12239 raw records, 366 daily features
+2025-09-23 22:42:08,110 - INFO -    Success: 366 daily records collected
+2025-09-23 22:42:08,110 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:42:18,115 - INFO -    Year 2021 (27/72) - Starting collection...
+2025-09-23 22:42:18,115 - INFO - Collecting weather data for Fairfax County, VA - 2021
+2025-09-23 22:42:39,355 - INFO - Collected 3087 records for Fairfax County Q1 2021
+2025-09-23 22:43:12,387 - INFO - Collected 3223 records for Fairfax County Q2 2021
+2025-09-23 22:44:49,811 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2021-07-01', 'enddate': '2021-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 22:44:58,481 - INFO - Collected 3278 records for Fairfax County Q3 2021
+2025-09-23 22:45:54,717 - INFO - Collected 3114 records for Fairfax County Q4 2021
+2025-09-23 22:45:54,809 - INFO - Saved data for Fairfax County 2021: 12702 raw records, 365 daily features
+2025-09-23 22:45:54,809 - INFO -    Success: 365 daily records collected
+2025-09-23 22:45:54,809 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:46:04,813 - INFO -    Year 2022 (28/72) - Starting collection...
+2025-09-23 22:46:04,814 - INFO - Collecting weather data for Fairfax County, VA - 2022
+2025-09-23 22:46:23,534 - INFO - Collected 3096 records for Fairfax County Q1 2022
+2025-09-23 22:46:39,384 - INFO - Collected 3023 records for Fairfax County Q2 2022
+2025-09-23 22:47:33,015 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2022-07-01', 'enddate': '2022-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A51059&startdate=2022-07-01&enddate=2022-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 22:47:33,016 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 22:48:35,803 - INFO - Collected 3119 records for Fairfax County Q3 2022
+2025-09-23 22:49:06,564 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A51059&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 22:49:06,564 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 22:50:06,848 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A51059&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 22:50:06,850 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 22:51:20,575 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A51059&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 22:51:20,577 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 22:52:22,953 - INFO - Collected 3073 records for Fairfax County Q4 2022
+2025-09-23 22:52:23,048 - INFO - Saved data for Fairfax County 2022: 12311 raw records, 365 daily features
+2025-09-23 22:52:23,049 - INFO -    Success: 365 daily records collected
+2025-09-23 22:52:23,049 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:52:33,054 - INFO -    Year 2023 (29/72) - Starting collection...
+2025-09-23 22:52:33,055 - INFO - Collecting weather data for Fairfax County, VA - 2023
+2025-09-23 22:53:04,971 - INFO - Collected 3096 records for Fairfax County Q1 2023
+2025-09-23 22:53:36,333 - INFO - Collected 3199 records for Fairfax County Q2 2023
+2025-09-23 22:53:51,336 - INFO - Collected 3183 records for Fairfax County Q3 2023
+2025-09-23 22:54:05,967 - INFO - Collected 3088 records for Fairfax County Q4 2023
+2025-09-23 22:54:06,059 - INFO - Saved data for Fairfax County 2023: 12566 raw records, 365 daily features
+2025-09-23 22:54:06,060 - INFO -    Success: 365 daily records collected
+2025-09-23 22:54:06,060 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:54:16,065 - INFO -    Year 2024 (30/72) - Starting collection...
+2025-09-23 22:54:16,067 - INFO - Collecting weather data for Fairfax County, VA - 2024
+2025-09-23 22:54:28,517 - INFO - Collected 3046 records for Fairfax County Q1 2024
+2025-09-23 22:55:09,141 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:51059', 'startdate': '2024-04-01', 'enddate': '2024-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A51059&startdate=2024-04-01&enddate=2024-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=3001
+2025-09-23 22:55:09,142 - WARNING - Server error detected, waiting 60 seconds...
+2025-09-23 22:56:11,689 - INFO - Collected 3139 records for Fairfax County Q2 2024
+2025-09-23 22:56:25,786 - INFO - Collected 3237 records for Fairfax County Q3 2024
+2025-09-23 22:56:40,654 - INFO - Collected 3187 records for Fairfax County Q4 2024
+2025-09-23 22:56:40,748 - INFO - Saved data for Fairfax County 2024: 12609 raw records, 366 daily features
+2025-09-23 22:56:40,748 - INFO -    Success: 366 daily records collected
+2025-09-23 22:56:40,748 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 22:56:50,753 - INFO -    Completed Fairfax County - pausing 20 seconds before next county...
+2025-09-23 22:57:10,757 - INFO - Processing County 6/12: San Diego County, CA
+2025-09-23 22:57:10,758 - INFO -    Risk Profile: wildfires_psps
+2025-09-23 22:57:10,758 - INFO -    Year 2019 (31/72) - Starting collection...
+2025-09-23 22:57:10,759 - INFO - Collecting weather data for San Diego County, CA - 2019
+2025-09-23 22:58:15,609 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2019-01-01&enddate=2019-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=10001
+2025-09-23 22:58:15,610 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:00:15,614 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:00:15,633 - INFO - Collected 10000 records for San Diego County Q1 2019
+2025-09-23 23:01:42,163 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=14001
+2025-09-23 23:01:42,165 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:03:42,170 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:03:42,193 - INFO - Collected 14000 records for San Diego County Q2 2019
+2025-09-23 23:05:17,823 - INFO - Collected 18040 records for San Diego County Q3 2019
+2025-09-23 23:06:45,487 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2019-10-01', 'enddate': '2019-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2019-10-01&enddate=2019-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=10001
+2025-09-23 23:06:45,488 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:08:45,493 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:08:45,514 - INFO - Collected 10000 records for San Diego County Q4 2019
+2025-09-23 23:08:45,782 - INFO - Saved data for San Diego County 2019: 52040 raw records, 265 daily features
+2025-09-23 23:08:45,785 - INFO -    Success: 265 daily records collected
+2025-09-23 23:08:45,785 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 23:08:55,791 - INFO -    Year 2020 (32/72) - Starting collection...
+2025-09-23 23:08:55,791 - INFO - Collecting weather data for San Diego County, CA - 2020
+2025-09-23 23:10:40,126 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-01-01', 'enddate': '2020-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-01-01&enddate=2020-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=15001
+2025-09-23 23:10:40,128 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:12:40,131 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:12:40,155 - INFO - Collected 15000 records for San Diego County Q1 2020
+2025-09-23 23:13:18,478 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-04-01', 'enddate': '2020-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-04-01&enddate=2020-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 23:13:18,480 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 23:15:00,388 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-04-01', 'enddate': '2020-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-04-01&enddate=2020-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=7001
+2025-09-23 23:15:00,390 - WARNING - Server error detected, waiting 100 seconds...
+2025-09-23 23:17:11,158 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-04-01', 'enddate': '2020-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-04-01&enddate=2020-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=7001
+2025-09-23 23:17:11,159 - WARNING - Server error detected, waiting 100 seconds...
+2025-09-23 23:19:47,422 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-04-01', 'enddate': '2020-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-04-01&enddate=2020-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=15001
+2025-09-23 23:19:47,424 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:21:47,426 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:21:47,454 - INFO - Collected 15000 records for San Diego County Q2 2020
+2025-09-23 23:22:17,862 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-07-01', 'enddate': '2020-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-07-01&enddate=2020-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-23 23:22:17,863 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-23 23:23:20,804 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-07-01', 'enddate': '2020-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-07-01&enddate=2020-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 23:23:20,805 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 23:25:13,204 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-07-01', 'enddate': '2020-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-07-01&enddate=2020-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=14001
+2025-09-23 23:25:13,207 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:27:13,210 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:27:13,237 - INFO - Collected 14000 records for San Diego County Q3 2020
+2025-09-23 23:28:13,413 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-23 23:29:29,543 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 23:29:29,544 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 23:31:20,255 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=5001
+2025-09-23 23:31:20,257 - WARNING - Server error detected, waiting 80 seconds...
+2025-09-23 23:33:13,533 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=6001
+2025-09-23 23:33:13,535 - WARNING - Server error detected, waiting 90 seconds...
+2025-09-23 23:35:49,165 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=17001
+2025-09-23 23:35:49,166 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:37:49,173 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:37:49,213 - INFO - Collected 17000 records for San Diego County Q4 2020
+2025-09-23 23:37:49,567 - INFO - Saved data for San Diego County 2020: 61000 raw records, 315 daily features
+2025-09-23 23:37:49,571 - INFO -    Success: 315 daily records collected
+2025-09-23 23:37:49,571 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 23:37:59,576 - INFO -    Year 2021 (33/72) - Starting collection...
+2025-09-23 23:37:59,576 - INFO - Collecting weather data for San Diego County, CA - 2021
+2025-09-23 23:39:02,034 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2021-01-01', 'enddate': '2021-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2021-01-01&enddate=2021-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001
+2025-09-23 23:39:02,035 - WARNING - Server error detected, waiting 110 seconds...
+2025-09-23 23:41:28,644 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2021-01-01', 'enddate': '2021-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2021-01-01&enddate=2021-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=10001
+2025-09-23 23:41:28,646 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:43:28,653 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:43:28,669 - INFO - Collected 10000 records for San Diego County Q1 2021
+2025-09-23 23:44:06,255 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2021-04-01&enddate=2021-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-23 23:44:06,257 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-23 23:45:38,560 - INFO - Collected 16662 records for San Diego County Q2 2021
+2025-09-23 23:46:47,998 - INFO - Collected 17174 records for San Diego County Q3 2021
+2025-09-23 23:47:54,441 - INFO - Collected 17544 records for San Diego County Q4 2021
+2025-09-23 23:47:54,750 - INFO - Saved data for San Diego County 2021: 61380 raw records, 329 daily features
+2025-09-23 23:47:54,752 - INFO -    Success: 329 daily records collected
+2025-09-23 23:47:54,753 - INFO -    Pausing 10 seconds before next collection...
+2025-09-23 23:48:04,758 - INFO -    Year 2022 (34/72) - Starting collection...
+2025-09-23 23:48:04,759 - INFO - Collecting weather data for San Diego County, CA - 2022
+2025-09-23 23:49:16,441 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2022-01-01', 'enddate': '2022-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2022-01-01&enddate=2022-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=14001
+2025-09-23 23:49:16,443 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:51:16,452 - ERROR - Too many retries, giving up on this request
+2025-09-23 23:51:16,477 - INFO - Collected 14000 records for San Diego County Q1 2022
+2025-09-23 23:51:59,853 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2022-04-01', 'enddate': '2022-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2022-04-01&enddate=2022-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-23 23:51:59,853 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-23 23:53:27,010 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2022-04-01', 'enddate': '2022-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2022-04-01&enddate=2022-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-23 23:53:27,012 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-23 23:55:17,282 - INFO - Collected 17695 records for San Diego County Q2 2022
+2025-09-23 23:56:13,200 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2022-07-01', 'enddate': '2022-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2022-07-01&enddate=2022-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=9001
+2025-09-23 23:56:13,202 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-23 23:58:54,449 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2022-07-01', 'enddate': '2022-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2022-07-01&enddate=2022-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=13001
+2025-09-23 23:58:54,451 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-24 00:00:54,458 - ERROR - Too many retries, giving up on this request
+2025-09-24 00:00:54,484 - INFO - Collected 13000 records for San Diego County Q3 2022
+2025-09-24 00:01:56,352 - INFO - Collected 17790 records for San Diego County Q4 2022
+2025-09-24 00:01:56,668 - INFO - Saved data for San Diego County 2022: 62485 raw records, 326 daily features
+2025-09-24 00:01:56,671 - INFO -    Success: 326 daily records collected
+2025-09-24 00:01:56,671 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 00:02:06,676 - INFO -    Year 2023 (35/72) - Starting collection...
+2025-09-24 00:02:06,677 - INFO - Collecting weather data for San Diego County, CA - 2023
+2025-09-24 00:02:36,936 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-01-01', 'enddate': '2023-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-01-01&enddate=2023-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 00:02:36,937 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 00:04:27,105 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-01-01', 'enddate': '2023-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-01-01&enddate=2023-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 00:04:27,106 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 00:06:21,755 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-01-01', 'enddate': '2023-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-01-01&enddate=2023-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=13001
+2025-09-24 00:06:21,756 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-24 00:24:30,944 - ERROR - Too many retries, giving up on this request
+2025-09-24 00:24:30,976 - INFO - Collected 13000 records for San Diego County Q1 2023
+2025-09-24 00:35:17,922 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-04-01', 'enddate': '2023-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-24 00:36:03,913 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-04-01', 'enddate': '2023-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-04-01&enddate=2023-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-24 00:36:03,913 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-24 00:37:49,572 - INFO - Collected 17738 records for San Diego County Q2 2023
+2025-09-24 00:38:20,310 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-07-01', 'enddate': '2023-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-07-01&enddate=2023-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 00:38:20,311 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 00:39:45,096 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-07-01', 'enddate': '2023-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-07-01&enddate=2023-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001
+2025-09-24 00:39:45,096 - WARNING - Server error detected, waiting 110 seconds...
+2025-09-24 00:42:13,891 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-07-01', 'enddate': '2023-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-07-01&enddate=2023-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=11001
+2025-09-24 00:42:13,893 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-24 00:44:13,900 - ERROR - Too many retries, giving up on this request
+2025-09-24 00:44:13,929 - INFO - Collected 11000 records for San Diego County Q3 2023
+2025-09-24 00:51:30,042 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-24 00:52:44,449 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-10-01&enddate=2023-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001
+2025-09-24 00:52:44,450 - WARNING - Server error detected, waiting 110 seconds...
+2025-09-24 00:55:21,351 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2023-10-01', 'enddate': '2023-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2023-10-01&enddate=2023-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=14001
+2025-09-24 00:55:21,352 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-24 00:57:21,359 - ERROR - Too many retries, giving up on this request
+2025-09-24 00:57:21,385 - INFO - Collected 14000 records for San Diego County Q4 2023
+2025-09-24 00:57:21,832 - INFO - Saved data for San Diego County 2023: 55738 raw records, 289 daily features
+2025-09-24 00:57:21,836 - INFO -    Success: 289 daily records collected
+2025-09-24 00:57:21,836 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 00:57:31,841 - INFO -    Year 2024 (36/72) - Starting collection...
+2025-09-24 00:57:31,842 - INFO - Collecting weather data for San Diego County, CA - 2024
+2025-09-24 00:58:27,873 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2024-01-01', 'enddate': '2024-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2024-01-01&enddate=2024-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001
+2025-09-24 00:58:27,873 - WARNING - Server error detected, waiting 110 seconds...
+2025-09-24 01:01:15,133 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2024-01-01', 'enddate': '2024-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2024-01-01&enddate=2024-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=16001
+2025-09-24 01:01:15,135 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-24 01:03:15,141 - ERROR - Too many retries, giving up on this request
+2025-09-24 01:03:15,170 - INFO - Collected 16000 records for San Diego County Q1 2024
+2025-09-24 01:15:43,924 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2024-04-01', 'enddate': '2024-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-24 01:16:27,594 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06073', 'startdate': '2024-04-01', 'enddate': '2024-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06073&startdate=2024-04-01&enddate=2024-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-24 01:16:27,595 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-24 01:18:15,430 - INFO - Collected 17316 records for San Diego County Q2 2024
+2025-09-24 01:19:07,811 - INFO - Collected 16458 records for San Diego County Q3 2024
+2025-09-24 01:20:00,792 - INFO - Collected 16356 records for San Diego County Q4 2024
+2025-09-24 01:20:01,094 - INFO - Saved data for San Diego County 2024: 66130 raw records, 357 daily features
+2025-09-24 01:20:01,097 - INFO -    Success: 357 daily records collected
+2025-09-24 01:20:01,097 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:20:11,103 - INFO -    Completed San Diego County - pausing 20 seconds before next county...
+2025-09-24 01:20:31,105 - INFO - Processing County 7/12: San Francisco County, CA
+2025-09-24 01:20:31,105 - INFO -    Risk Profile: earthquakes_fog
+2025-09-24 01:20:31,106 - INFO -    Year 2019 (37/72) - Starting collection...
+2025-09-24 01:20:31,106 - INFO - Collecting weather data for San Francisco County, CA - 2019
+2025-09-24 01:20:34,126 - INFO - Collected 558 records for San Francisco County Q1 2019
+2025-09-24 01:21:51,521 - INFO - Collected 557 records for San Francisco County Q2 2019
+2025-09-24 01:21:56,763 - INFO - Collected 576 records for San Francisco County Q3 2019
+2025-09-24 01:22:00,002 - INFO - Collected 637 records for San Francisco County Q4 2019
+2025-09-24 01:22:00,040 - INFO - Saved data for San Francisco County 2019: 2328 raw records, 365 daily features
+2025-09-24 01:22:00,041 - INFO -    Success: 365 daily records collected
+2025-09-24 01:22:00,041 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:22:10,044 - INFO -    Year 2020 (38/72) - Starting collection...
+2025-09-24 01:22:10,045 - INFO - Collecting weather data for San Francisco County, CA - 2020
+2025-09-24 01:22:15,006 - INFO - Collected 601 records for San Francisco County Q1 2020
+2025-09-24 01:22:20,597 - INFO - Collected 504 records for San Francisco County Q2 2020
+2025-09-24 01:22:51,485 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06075', 'startdate': '2020-07-01', 'enddate': '2020-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06075&startdate=2020-07-01&enddate=2020-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 01:22:51,486 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 01:23:25,003 - INFO - Collected 554 records for San Francisco County Q3 2020
+2025-09-24 01:23:30,195 - INFO - Collected 684 records for San Francisco County Q4 2020
+2025-09-24 01:23:30,229 - INFO - Saved data for San Francisco County 2020: 2343 raw records, 366 daily features
+2025-09-24 01:23:30,230 - INFO -    Success: 366 daily records collected
+2025-09-24 01:23:30,230 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:23:40,235 - INFO -    Year 2021 (39/72) - Starting collection...
+2025-09-24 01:23:40,235 - INFO - Collecting weather data for San Francisco County, CA - 2021
+2025-09-24 01:23:44,403 - INFO - Collected 749 records for San Francisco County Q1 2021
+2025-09-24 01:23:50,268 - INFO - Collected 730 records for San Francisco County Q2 2021
+2025-09-24 01:23:55,933 - INFO - Collected 751 records for San Francisco County Q3 2021
+2025-09-24 01:24:02,216 - INFO - Collected 711 records for San Francisco County Q4 2021
+2025-09-24 01:24:02,257 - INFO - Saved data for San Francisco County 2021: 2941 raw records, 365 daily features
+2025-09-24 01:24:02,257 - INFO -    Success: 365 daily records collected
+2025-09-24 01:24:02,257 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:24:12,263 - INFO -    Year 2022 (40/72) - Starting collection...
+2025-09-24 01:24:12,263 - INFO - Collecting weather data for San Francisco County, CA - 2022
+2025-09-24 01:24:16,813 - INFO - Collected 577 records for San Francisco County Q1 2022
+2025-09-24 01:24:20,607 - INFO - Collected 575 records for San Francisco County Q2 2022
+2025-09-24 01:24:27,027 - INFO - Collected 585 records for San Francisco County Q3 2022
+2025-09-24 01:24:57,837 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:06075', 'startdate': '2022-10-01', 'enddate': '2022-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A06075&startdate=2022-10-01&enddate=2022-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 01:24:57,838 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 01:25:30,990 - INFO - Collected 581 records for San Francisco County Q4 2022
+2025-09-24 01:25:31,028 - INFO - Saved data for San Francisco County 2022: 2318 raw records, 365 daily features
+2025-09-24 01:25:31,029 - INFO -    Success: 365 daily records collected
+2025-09-24 01:25:31,029 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:25:41,034 - INFO -    Year 2023 (41/72) - Starting collection...
+2025-09-24 01:25:41,035 - INFO - Collecting weather data for San Francisco County, CA - 2023
+2025-09-24 01:25:45,696 - INFO - Collected 703 records for San Francisco County Q1 2023
+2025-09-24 01:25:48,156 - INFO - Collected 769 records for San Francisco County Q2 2023
+2025-09-24 01:25:50,528 - INFO - Collected 844 records for San Francisco County Q3 2023
+2025-09-24 01:25:52,997 - INFO - Collected 749 records for San Francisco County Q4 2023
+2025-09-24 01:25:53,037 - INFO - Saved data for San Francisco County 2023: 3065 raw records, 365 daily features
+2025-09-24 01:25:53,038 - INFO -    Success: 365 daily records collected
+2025-09-24 01:25:53,038 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:26:03,043 - INFO -    Year 2024 (42/72) - Starting collection...
+2025-09-24 01:26:03,043 - INFO - Collecting weather data for San Francisco County, CA - 2024
+2025-09-24 01:26:05,533 - INFO - Collected 780 records for San Francisco County Q1 2024
+2025-09-24 01:26:08,587 - INFO - Collected 767 records for San Francisco County Q2 2024
+2025-09-24 01:26:11,262 - INFO - Collected 733 records for San Francisco County Q3 2024
+2025-09-24 01:26:13,761 - INFO - Collected 704 records for San Francisco County Q4 2024
+2025-09-24 01:26:13,804 - INFO - Saved data for San Francisco County 2024: 2984 raw records, 366 daily features
+2025-09-24 01:26:13,805 - INFO -    Success: 366 daily records collected
+2025-09-24 01:26:13,805 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:26:23,810 - INFO -    Completed San Francisco County - pausing 20 seconds before next county...
+2025-09-24 01:26:43,816 - INFO - Processing County 8/12: Suffolk County, MA
+2025-09-24 01:26:43,817 - INFO -    Risk Profile: winter_storms_coastal
+2025-09-24 01:26:43,817 - INFO -    Year 2019 (43/72) - Starting collection...
+2025-09-24 01:26:43,817 - INFO - Collecting weather data for Suffolk County, MA - 2019
+2025-09-24 01:26:48,753 - INFO - Collected 1008 records for Suffolk County Q1 2019
+2025-09-24 01:26:53,775 - INFO - Collected 1035 records for Suffolk County Q2 2019
+2025-09-24 01:26:59,306 - INFO - Collected 1013 records for Suffolk County Q3 2019
+2025-09-24 01:27:30,064 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:25025', 'startdate': '2019-10-01', 'enddate': '2019-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A25025&startdate=2019-10-01&enddate=2019-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 01:27:30,065 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 01:28:05,250 - INFO - Collected 1017 records for Suffolk County Q4 2019
+2025-09-24 01:28:05,306 - INFO - Saved data for Suffolk County 2019: 4073 raw records, 365 daily features
+2025-09-24 01:28:05,306 - INFO -    Success: 365 daily records collected
+2025-09-24 01:28:05,306 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:28:15,311 - INFO -    Year 2020 (44/72) - Starting collection...
+2025-09-24 01:28:15,312 - INFO - Collecting weather data for Suffolk County, MA - 2020
+2025-09-24 01:28:17,459 - INFO - Collected 996 records for Suffolk County Q1 2020
+2025-09-24 01:28:19,997 - INFO - Collected 958 records for Suffolk County Q2 2020
+2025-09-24 01:28:22,628 - INFO - Collected 968 records for Suffolk County Q3 2020
+2025-09-24 01:28:25,226 - INFO - Collected 971 records for Suffolk County Q4 2020
+2025-09-24 01:28:25,277 - INFO - Saved data for Suffolk County 2020: 3893 raw records, 366 daily features
+2025-09-24 01:28:25,277 - INFO -    Success: 366 daily records collected
+2025-09-24 01:28:25,277 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:28:35,282 - INFO -    Year 2021 (45/72) - Starting collection...
+2025-09-24 01:28:35,283 - INFO - Collecting weather data for Suffolk County, MA - 2021
+2025-09-24 01:28:37,346 - INFO - Collected 986 records for Suffolk County Q1 2021
+2025-09-24 01:28:43,239 - INFO - Collected 1030 records for Suffolk County Q2 2021
+2025-09-24 01:28:48,559 - INFO - Collected 1070 records for Suffolk County Q3 2021
+2025-09-24 01:28:53,805 - INFO - Collected 1053 records for Suffolk County Q4 2021
+2025-09-24 01:28:53,844 - INFO - Saved data for Suffolk County 2021: 4139 raw records, 365 daily features
+2025-09-24 01:28:53,844 - INFO -    Success: 365 daily records collected
+2025-09-24 01:28:53,844 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:29:03,849 - INFO -    Year 2022 (46/72) - Starting collection...
+2025-09-24 01:29:03,850 - INFO - Collecting weather data for Suffolk County, MA - 2022
+2025-09-24 01:29:08,244 - INFO - Collected 1051 records for Suffolk County Q1 2022
+2025-09-24 01:29:12,985 - INFO - Collected 1040 records for Suffolk County Q2 2022
+2025-09-24 01:29:17,950 - INFO - Collected 1030 records for Suffolk County Q3 2022
+2025-09-24 01:29:22,816 - INFO - Collected 1043 records for Suffolk County Q4 2022
+2025-09-24 01:29:22,866 - INFO - Saved data for Suffolk County 2022: 4164 raw records, 365 daily features
+2025-09-24 01:29:22,867 - INFO -    Success: 365 daily records collected
+2025-09-24 01:29:22,867 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:29:32,872 - INFO -    Year 2023 (47/72) - Starting collection...
+2025-09-24 01:29:32,872 - INFO - Collecting weather data for Suffolk County, MA - 2023
+2025-09-24 01:29:37,118 - INFO - Collected 1030 records for Suffolk County Q1 2023
+2025-09-24 01:29:41,693 - INFO - Collected 1046 records for Suffolk County Q2 2023
+2025-09-24 01:29:46,422 - INFO - Collected 1081 records for Suffolk County Q3 2023
+2025-09-24 01:29:51,027 - INFO - Collected 1074 records for Suffolk County Q4 2023
+2025-09-24 01:29:51,078 - INFO - Saved data for Suffolk County 2023: 4231 raw records, 365 daily features
+2025-09-24 01:29:51,078 - INFO -    Success: 365 daily records collected
+2025-09-24 01:29:51,078 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:30:01,083 - INFO -    Year 2024 (48/72) - Starting collection...
+2025-09-24 01:30:01,084 - INFO - Collecting weather data for Suffolk County, MA - 2024
+2025-09-24 01:30:31,370 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:25025', 'startdate': '2024-01-01', 'enddate': '2024-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A25025&startdate=2024-01-01&enddate=2024-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 01:30:31,370 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 01:31:06,978 - INFO - Collected 1143 records for Suffolk County Q1 2024
+2025-09-24 01:31:12,341 - INFO - Collected 1147 records for Suffolk County Q2 2024
+2025-09-24 01:31:18,387 - INFO - Collected 1135 records for Suffolk County Q3 2024
+2025-09-24 01:31:23,911 - INFO - Collected 1109 records for Suffolk County Q4 2024
+2025-09-24 01:31:23,959 - INFO - Saved data for Suffolk County 2024: 4534 raw records, 366 daily features
+2025-09-24 01:31:23,960 - INFO -    Success: 366 daily records collected
+2025-09-24 01:31:23,960 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:31:33,965 - INFO -    Completed Suffolk County - pausing 20 seconds before next county...
+2025-09-24 01:31:53,970 - INFO - Processing County 9/12: New York County, NY
+2025-09-24 01:31:53,971 - INFO -    Risk Profile: storms_high_density
+2025-09-24 01:31:53,971 - INFO -    Year 2019 (49/72) - Starting collection...
+2025-09-24 01:31:53,971 - INFO - Collecting weather data for New York County, NY - 2019
+2025-09-24 01:32:24,318 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:36061', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A36061&startdate=2019-01-01&enddate=2019-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 01:32:24,319 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 01:32:56,969 - INFO - Collected 447 records for New York County Q1 2019
+2025-09-24 01:32:59,990 - INFO - Collected 676 records for New York County Q2 2019
+2025-09-24 01:33:03,318 - INFO - Collected 685 records for New York County Q3 2019
+2025-09-24 01:33:06,699 - INFO - Collected 726 records for New York County Q4 2019
+2025-09-24 01:33:06,729 - INFO - Saved data for New York County 2019: 2534 raw records, 365 daily features
+2025-09-24 01:33:06,729 - INFO -    Success: 365 daily records collected
+2025-09-24 01:33:06,729 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:33:16,734 - INFO -    Year 2020 (50/72) - Starting collection...
+2025-09-24 01:33:16,734 - INFO - Collecting weather data for New York County, NY - 2020
+2025-09-24 01:33:18,962 - INFO - Collected 675 records for New York County Q1 2020
+2025-09-24 01:33:21,771 - INFO - Collected 566 records for New York County Q2 2020
+2025-09-24 01:33:24,743 - INFO - Collected 661 records for New York County Q3 2020
+2025-09-24 01:33:27,505 - INFO - Collected 653 records for New York County Q4 2020
+2025-09-24 01:33:27,542 - INFO - Saved data for New York County 2020: 2555 raw records, 366 daily features
+2025-09-24 01:33:27,542 - INFO -    Success: 366 daily records collected
+2025-09-24 01:33:27,542 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:33:37,547 - INFO -    Year 2021 (51/72) - Starting collection...
+2025-09-24 01:33:37,548 - INFO - Collecting weather data for New York County, NY - 2021
+2025-09-24 01:33:39,706 - INFO - Collected 690 records for New York County Q1 2021
+2025-09-24 01:34:10,522 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:36061', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A36061&startdate=2021-04-01&enddate=2021-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1
+2025-09-24 01:34:10,523 - WARNING - Server error detected, waiting 30 seconds...
+2025-09-24 01:34:42,875 - INFO - Collected 703 records for New York County Q2 2021
+2025-09-24 01:34:45,514 - INFO - Collected 703 records for New York County Q3 2021
+2025-09-24 01:34:48,268 - INFO - Collected 608 records for New York County Q4 2021
+2025-09-24 01:34:48,311 - INFO - Saved data for New York County 2021: 2704 raw records, 365 daily features
+2025-09-24 01:34:48,311 - INFO -    Success: 365 daily records collected
+2025-09-24 01:34:48,311 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:34:58,316 - INFO -    Year 2022 (52/72) - Starting collection...
+2025-09-24 01:34:58,317 - INFO - Collecting weather data for New York County, NY - 2022
+2025-09-24 01:35:00,798 - INFO - Collected 876 records for New York County Q1 2022
+2025-09-24 01:35:04,798 - INFO - Collected 912 records for New York County Q2 2022
+2025-09-24 01:35:11,146 - INFO - Collected 1053 records for New York County Q3 2022
+2025-09-24 01:35:17,801 - INFO - Collected 1001 records for New York County Q4 2022
+2025-09-24 01:35:17,848 - INFO - Saved data for New York County 2022: 3842 raw records, 365 daily features
+2025-09-24 01:35:17,848 - INFO -    Success: 365 daily records collected
+2025-09-24 01:35:17,849 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:35:27,854 - INFO -    Year 2023 (53/72) - Starting collection...
+2025-09-24 01:35:27,854 - INFO - Collecting weather data for New York County, NY - 2023
+2025-09-24 01:35:30,759 - INFO - Collected 983 records for New York County Q1 2023
+2025-09-24 01:35:36,098 - INFO - Collected 1059 records for New York County Q2 2023
+2025-09-24 01:35:39,141 - INFO - Collected 971 records for New York County Q3 2023
+2025-09-24 01:35:41,964 - INFO - Collected 886 records for New York County Q4 2023
+2025-09-24 01:35:42,013 - INFO - Saved data for New York County 2023: 3899 raw records, 365 daily features
+2025-09-24 01:35:42,013 - INFO -    Success: 365 daily records collected
+2025-09-24 01:35:42,013 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:35:52,018 - INFO -    Year 2024 (54/72) - Starting collection...
+2025-09-24 01:35:52,019 - INFO - Collecting weather data for New York County, NY - 2024
+2025-09-24 01:35:54,677 - INFO - Collected 909 records for New York County Q1 2024
+2025-09-24 01:35:57,257 - INFO - Collected 796 records for New York County Q2 2024
+2025-09-24 01:36:00,024 - INFO - Collected 620 records for New York County Q3 2024
+2025-09-24 01:36:03,644 - INFO - Collected 572 records for New York County Q4 2024
+2025-09-24 01:36:03,684 - INFO - Saved data for New York County 2024: 2897 raw records, 366 daily features
+2025-09-24 01:36:03,684 - INFO -    Success: 366 daily records collected
+2025-09-24 01:36:03,684 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:36:13,689 - INFO -    Completed New York County - pausing 20 seconds before next county...
+2025-09-24 01:36:33,692 - INFO - Processing County 10/12: Cook County, IL
+2025-09-24 01:36:33,693 - INFO -    Risk Profile: thunderstorms_winter
+2025-09-24 01:36:33,693 - INFO -    Year 2019 (55/72) - Starting collection...
+2025-09-24 01:36:33,693 - INFO - Collecting weather data for Cook County, IL - 2019
+2025-09-24 01:37:06,476 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2019-01-01&enddate=2019-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-24 01:37:06,477 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-24 01:38:19,376 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2019-01-01', 'enddate': '2019-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2019-01-01&enddate=2019-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 01:38:19,377 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 01:39:23,550 - INFO - Collected 6761 records for Cook County Q1 2019
+2025-09-24 01:40:05,707 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-24 01:40:05,708 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-24 01:41:26,975 - INFO - Collected 7518 records for Cook County Q2 2019
+2025-09-24 01:41:49,475 - INFO - Collected 7377 records for Cook County Q3 2019
+2025-09-24 01:42:31,805 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2019-10-01', 'enddate': '2019-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2019-10-01&enddate=2019-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-24 01:42:31,805 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-24 01:43:49,067 - INFO - Collected 6791 records for Cook County Q4 2019
+2025-09-24 01:43:49,281 - INFO - Saved data for Cook County 2019: 28447 raw records, 365 daily features
+2025-09-24 01:43:49,282 - INFO -    Success: 365 daily records collected
+2025-09-24 01:43:49,282 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:43:59,287 - INFO -    Year 2020 (56/72) - Starting collection...
+2025-09-24 01:43:59,288 - INFO - Collecting weather data for Cook County, IL - 2020
+2025-09-24 01:44:35,760 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2020-01-01', 'enddate': '2020-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2020-01-01&enddate=2020-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 01:44:35,761 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 01:45:39,591 - INFO - Collected 6460 records for Cook County Q1 2020
+2025-09-24 01:46:06,664 - INFO - Collected 8098 records for Cook County Q2 2020
+2025-09-24 01:46:31,221 - INFO - Collected 8114 records for Cook County Q3 2020
+2025-09-24 01:47:08,054 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2020-10-01', 'enddate': '2020-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2020-10-01&enddate=2020-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 01:47:08,054 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 01:48:14,967 - INFO - Collected 7834 records for Cook County Q4 2020
+2025-09-24 01:48:15,158 - INFO - Saved data for Cook County 2020: 30506 raw records, 366 daily features
+2025-09-24 01:48:15,160 - INFO -    Success: 366 daily records collected
+2025-09-24 01:48:15,160 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:48:25,165 - INFO -    Year 2021 (57/72) - Starting collection...
+2025-09-24 01:48:25,165 - INFO - Collecting weather data for Cook County, IL - 2021
+2025-09-24 01:49:17,476 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2021-01-01', 'enddate': '2021-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2021-01-01&enddate=2021-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=7001
+2025-09-24 01:49:17,477 - WARNING - Server error detected, waiting 100 seconds...
+2025-09-24 01:50:59,833 - INFO - Collected 7533 records for Cook County Q1 2021
+2025-09-24 01:53:33,632 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-24 01:54:39,145 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2021-04-01', 'enddate': '2021-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2021-04-01&enddate=2021-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=6001
+2025-09-24 01:54:39,145 - WARNING - Server error detected, waiting 90 seconds...
+2025-09-24 01:56:17,595 - INFO - Collected 8208 records for Cook County Q2 2021
+2025-09-24 01:56:44,751 - INFO - Collected 8317 records for Cook County Q3 2021
+2025-09-24 01:57:21,864 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2021-10-01', 'enddate': '2021-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2021-10-01&enddate=2021-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 01:57:21,865 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 01:58:28,831 - INFO - Collected 7972 records for Cook County Q4 2021
+2025-09-24 01:58:28,994 - INFO - Saved data for Cook County 2021: 32030 raw records, 365 daily features
+2025-09-24 01:58:28,996 - INFO -    Success: 365 daily records collected
+2025-09-24 01:58:28,996 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 01:58:39,001 - INFO -    Year 2022 (58/72) - Starting collection...
+2025-09-24 01:58:39,001 - INFO - Collecting weather data for Cook County, IL - 2022
+2025-09-24 01:59:01,917 - INFO - Collected 7189 records for Cook County Q1 2022
+2025-09-24 01:59:25,426 - INFO - Collected 7734 records for Cook County Q2 2022
+2025-09-24 02:07:19,311 - INFO - Collected 7826 records for Cook County Q3 2022
+2025-09-24 02:08:15,556 - INFO - Collected 7316 records for Cook County Q4 2022
+2025-09-24 02:08:15,734 - INFO - Saved data for Cook County 2022: 30065 raw records, 365 daily features
+2025-09-24 02:08:15,735 - INFO -    Success: 365 daily records collected
+2025-09-24 02:08:15,735 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:08:25,740 - INFO -    Year 2023 (59/72) - Starting collection...
+2025-09-24 02:08:25,741 - INFO - Collecting weather data for Cook County, IL - 2023
+2025-09-24 02:09:04,572 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2023-01-01', 'enddate': '2023-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2023-01-01&enddate=2023-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 02:09:04,572 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 02:10:23,718 - INFO - Collected 7019 records for Cook County Q1 2023
+2025-09-24 02:10:51,349 - INFO - Collected 7285 records for Cook County Q2 2023
+2025-09-24 02:11:21,088 - INFO - Collected 7610 records for Cook County Q3 2023
+2025-09-24 02:11:46,245 - INFO - Collected 7301 records for Cook County Q4 2023
+2025-09-24 02:11:46,400 - INFO - Saved data for Cook County 2023: 29215 raw records, 365 daily features
+2025-09-24 02:11:46,402 - INFO -    Success: 365 daily records collected
+2025-09-24 02:11:46,402 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:11:56,407 - INFO -    Year 2024 (60/72) - Starting collection...
+2025-09-24 02:11:56,407 - INFO - Collecting weather data for Cook County, IL - 2024
+2025-09-24 02:12:23,739 - INFO - Collected 7004 records for Cook County Q1 2024
+2025-09-24 02:12:57,939 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2024-04-01', 'enddate': '2024-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A17031&startdate=2024-04-01&enddate=2024-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=1001
+2025-09-24 02:12:57,941 - WARNING - Server error detected, waiting 40 seconds...
+2025-09-24 02:29:00,508 - INFO - Collected 7865 records for Cook County Q2 2024
+2025-09-24 02:34:34,184 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:17031', 'startdate': '2024-07-01', 'enddate': '2024-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-24 02:34:57,609 - INFO - Collected 8219 records for Cook County Q3 2024
+2025-09-24 02:35:24,114 - INFO - Collected 7465 records for Cook County Q4 2024
+2025-09-24 02:35:24,282 - INFO - Saved data for Cook County 2024: 30553 raw records, 366 daily features
+2025-09-24 02:35:24,284 - INFO -    Success: 366 daily records collected
+2025-09-24 02:35:24,284 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:35:34,289 - INFO -    Completed Cook County - pausing 20 seconds before next county...
+2025-09-24 02:35:54,295 - INFO - Processing County 11/12: Fulton County, GA
+2025-09-24 02:35:54,295 - INFO -    Risk Profile: ice_storms_thunderstorms
+2025-09-24 02:35:54,295 - INFO -    Year 2019 (61/72) - Starting collection...
+2025-09-24 02:35:54,296 - INFO - Collecting weather data for Fulton County, GA - 2019
+2025-09-24 02:35:59,455 - INFO - Collected 1787 records for Fulton County Q1 2019
+2025-09-24 02:36:06,246 - INFO - Collected 1816 records for Fulton County Q2 2019
+2025-09-24 02:36:13,606 - INFO - Collected 1925 records for Fulton County Q3 2019
+2025-09-24 02:36:21,182 - INFO - Collected 1920 records for Fulton County Q4 2019
+2025-09-24 02:36:21,249 - INFO - Saved data for Fulton County 2019: 7448 raw records, 365 daily features
+2025-09-24 02:36:21,249 - INFO -    Success: 365 daily records collected
+2025-09-24 02:36:21,249 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:36:31,255 - INFO -    Year 2020 (62/72) - Starting collection...
+2025-09-24 02:36:31,255 - INFO - Collecting weather data for Fulton County, GA - 2020
+2025-09-24 02:36:37,098 - INFO - Collected 1891 records for Fulton County Q1 2020
+2025-09-24 02:36:45,679 - INFO - Collected 2016 records for Fulton County Q2 2020
+2025-09-24 02:36:57,847 - INFO - Collected 2006 records for Fulton County Q3 2020
+2025-09-24 02:37:05,467 - INFO - Collected 1979 records for Fulton County Q4 2020
+2025-09-24 02:37:05,536 - INFO - Saved data for Fulton County 2020: 7892 raw records, 366 daily features
+2025-09-24 02:37:05,537 - INFO -    Success: 366 daily records collected
+2025-09-24 02:37:05,537 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:37:15,542 - INFO -    Year 2021 (63/72) - Starting collection...
+2025-09-24 02:37:15,542 - INFO - Collecting weather data for Fulton County, GA - 2021
+2025-09-24 02:37:20,254 - INFO - Collected 1972 records for Fulton County Q1 2021
+2025-09-24 02:37:26,094 - INFO - Collected 1977 records for Fulton County Q2 2021
+2025-09-24 02:37:35,102 - INFO - Collected 2023 records for Fulton County Q3 2021
+2025-09-24 02:37:40,567 - INFO - Collected 1897 records for Fulton County Q4 2021
+2025-09-24 02:37:40,627 - INFO - Saved data for Fulton County 2021: 7869 raw records, 365 daily features
+2025-09-24 02:37:40,628 - INFO -    Success: 365 daily records collected
+2025-09-24 02:37:40,628 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:37:50,634 - INFO -    Year 2022 (64/72) - Starting collection...
+2025-09-24 02:37:50,634 - INFO - Collecting weather data for Fulton County, GA - 2022
+2025-09-24 02:37:56,446 - INFO - Collected 1809 records for Fulton County Q1 2022
+2025-09-24 02:38:02,583 - INFO - Collected 1836 records for Fulton County Q2 2022
+2025-09-24 02:38:10,000 - INFO - Collected 1924 records for Fulton County Q3 2022
+2025-09-24 02:38:17,306 - INFO - Collected 1915 records for Fulton County Q4 2022
+2025-09-24 02:38:17,365 - INFO - Saved data for Fulton County 2022: 7484 raw records, 365 daily features
+2025-09-24 02:38:17,365 - INFO -    Success: 365 daily records collected
+2025-09-24 02:38:17,365 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:38:27,370 - INFO -    Year 2023 (65/72) - Starting collection...
+2025-09-24 02:38:27,371 - INFO - Collecting weather data for Fulton County, GA - 2023
+2025-09-24 02:38:34,443 - INFO - Collected 2008 records for Fulton County Q1 2023
+2025-09-24 02:38:43,064 - INFO - Collected 2201 records for Fulton County Q2 2023
+2025-09-24 02:38:57,766 - INFO - Collected 2275 records for Fulton County Q3 2023
+2025-09-24 02:39:11,258 - INFO - Collected 2116 records for Fulton County Q4 2023
+2025-09-24 02:39:11,330 - INFO - Saved data for Fulton County 2023: 8600 raw records, 365 daily features
+2025-09-24 02:39:11,330 - INFO -    Success: 365 daily records collected
+2025-09-24 02:39:11,330 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:39:21,335 - INFO -    Year 2024 (66/72) - Starting collection...
+2025-09-24 02:39:21,336 - INFO - Collecting weather data for Fulton County, GA - 2024
+2025-09-24 02:39:40,255 - INFO - Collected 2122 records for Fulton County Q1 2024
+2025-09-24 02:39:49,147 - INFO - Collected 2082 records for Fulton County Q2 2024
+2025-09-24 02:39:56,657 - INFO - Collected 2117 records for Fulton County Q3 2024
+2025-09-24 02:40:02,046 - INFO - Collected 1964 records for Fulton County Q4 2024
+2025-09-24 02:40:02,108 - INFO - Saved data for Fulton County 2024: 8285 raw records, 366 daily features
+2025-09-24 02:40:02,109 - INFO -    Success: 366 daily records collected
+2025-09-24 02:40:02,109 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:40:12,114 - INFO -    Completed Fulton County - pausing 20 seconds before next county...
+2025-09-24 02:40:32,118 - INFO - Processing County 12/12: King County, WA
+2025-09-24 02:40:32,119 - INFO -    Risk Profile: wind_storms_flooding
+2025-09-24 02:40:32,119 - INFO -    Year 2019 (67/72) - Starting collection...
+2025-09-24 02:40:32,119 - INFO - Collecting weather data for King County, WA - 2019
+2025-09-24 02:41:04,124 - INFO - Collected 10083 records for King County Q1 2019
+2025-09-24 02:41:57,554 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2019-04-01', 'enddate': '2019-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2019-04-01&enddate=2019-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001
+2025-09-24 02:41:57,554 - WARNING - Server error detected, waiting 110 seconds...
+2025-09-24 02:43:52,315 - INFO - Collected 9995 records for King County Q2 2019
+2025-09-24 02:44:28,693 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2019-07-01', 'enddate': '2019-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2019-07-01&enddate=2019-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 02:44:28,693 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 02:45:45,587 - INFO - Collected 10201 records for King County Q3 2019
+2025-09-24 02:46:20,557 - INFO - Collected 10667 records for King County Q4 2019
+2025-09-24 02:46:20,758 - INFO - Saved data for King County 2019: 40946 raw records, 365 daily features
+2025-09-24 02:46:20,760 - INFO -    Success: 365 daily records collected
+2025-09-24 02:46:20,760 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:46:30,765 - INFO -    Year 2020 (68/72) - Starting collection...
+2025-09-24 02:46:30,766 - INFO - Collecting weather data for King County, WA - 2020
+2025-09-24 02:46:58,465 - INFO - Collected 10648 records for King County Q1 2020
+2025-09-24 02:47:28,343 - INFO - Collected 10941 records for King County Q2 2020
+2025-09-24 02:47:58,302 - INFO - Collected 10784 records for King County Q3 2020
+2025-09-24 02:48:30,428 - INFO - Collected 10854 records for King County Q4 2020
+2025-09-24 02:48:30,666 - INFO - Saved data for King County 2020: 43227 raw records, 366 daily features
+2025-09-24 02:48:30,668 - INFO -    Success: 366 daily records collected
+2025-09-24 02:48:30,668 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 02:48:40,674 - INFO -    Year 2021 (69/72) - Starting collection...
+2025-09-24 02:48:40,674 - INFO - Collecting weather data for King County, WA - 2021
+2025-09-24 02:49:11,277 - INFO - Collected 10710 records for King County Q1 2021
+2025-09-24 02:49:41,526 - INFO - Collected 10766 records for King County Q2 2021
+2025-09-24 02:50:12,936 - INFO - Collected 10554 records for King County Q3 2021
+2025-09-24 02:51:08,483 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2021-10-01', 'enddate': '2021-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2021-10-01&enddate=2021-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001
+2025-09-24 02:51:08,484 - WARNING - Server error detected, waiting 110 seconds...
+2025-09-24 03:00:22,532 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2021-10-01', 'enddate': '2021-12-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Max retries exceeded with url: /cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2021-10-01&enddate=2021-12-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=8001 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x11ad79b40>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-09-24 03:01:30,944 - INFO - Collected 10770 records for King County Q4 2021
+2025-09-24 03:01:31,197 - INFO - Saved data for King County 2021: 42800 raw records, 365 daily features
+2025-09-24 03:01:31,199 - INFO -    Success: 365 daily records collected
+2025-09-24 03:01:31,199 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 03:01:41,209 - INFO -    Year 2022 (70/72) - Starting collection...
+2025-09-24 03:01:41,210 - INFO - Collecting weather data for King County, WA - 2022
+2025-09-24 03:06:26,974 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2022-01-01', 'enddate': '2022-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out. (read timeout=60)
+2025-09-24 03:07:05,367 - INFO - Collected 10898 records for King County Q1 2022
+2025-09-24 03:15:36,325 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2022-04-01', 'enddate': '2022-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: HTTPSConnectionPool(host='www.ncei.noaa.gov', port=443): Read timed out.
+2025-09-24 03:16:52,757 - INFO - Collected 10850 records for King County Q2 2022
+2025-09-24 03:17:29,297 - INFO - Collected 10185 records for King County Q3 2022
+2025-09-24 03:18:03,844 - INFO - Collected 10191 records for King County Q4 2022
+2025-09-24 03:18:04,063 - INFO - Saved data for King County 2022: 42124 raw records, 365 daily features
+2025-09-24 03:18:04,065 - INFO -    Success: 365 daily records collected
+2025-09-24 03:18:04,065 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 03:18:14,069 - INFO -    Year 2023 (71/72) - Starting collection...
+2025-09-24 03:18:14,069 - INFO - Collecting weather data for King County, WA - 2023
+2025-09-24 03:18:44,137 - INFO - Collected 9895 records for King County Q1 2023
+2025-09-24 03:19:20,944 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2023-04-01', 'enddate': '2023-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2023-04-01&enddate=2023-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=2001
+2025-09-24 03:19:20,944 - WARNING - Server error detected, waiting 50 seconds...
+2025-09-24 03:20:56,254 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2023-04-01', 'enddate': '2023-06-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2023-04-01&enddate=2023-06-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=6001
+2025-09-24 03:20:56,256 - WARNING - Server error detected, waiting 90 seconds...
+2025-09-24 03:22:39,575 - INFO - Collected 9695 records for King County Q2 2023
+2025-09-24 03:23:11,333 - INFO - Collected 9553 records for King County Q3 2023
+2025-09-24 03:23:43,520 - INFO - Collected 9797 records for King County Q4 2023
+2025-09-24 03:23:43,710 - INFO - Saved data for King County 2023: 38940 raw records, 365 daily features
+2025-09-24 03:23:43,711 - INFO -    Success: 365 daily records collected
+2025-09-24 03:23:43,711 - INFO -    Pausing 10 seconds before next collection...
+2025-09-24 03:23:53,712 - INFO -    Year 2024 (72/72) - Starting collection...
+2025-09-24 03:23:53,713 - INFO - Collecting weather data for King County, WA - 2024
+2025-09-24 03:24:37,324 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2024-01-01', 'enddate': '2024-03-31', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2024-01-01&enddate=2024-03-31&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=4001
+2025-09-24 03:24:37,324 - WARNING - Server error detected, waiting 70 seconds...
+2025-09-24 03:26:08,658 - INFO - Collected 9559 records for King County Q1 2024
+2025-09-24 03:26:39,625 - INFO - Collected 9059 records for King County Q2 2024
+2025-09-24 03:27:37,247 - ERROR - Request failed for data with params {'datasetid': 'GHCND', 'locationid': 'FIPS:53033', 'startdate': '2024-07-01', 'enddate': '2024-09-30', 'units': 'metric', 'datatypeid': ['PRCP', 'TMAX', 'TMIN', 'WSF2', 'AWND', 'WSF5', 'WT01', 'WT02', 'WT03', 'WT04', 'WT05', 'WT06', 'WT08', 'WT11']}: 503 Server Error: Service Unavailable for url: https://www.ncei.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=FIPS%3A53033&startdate=2024-07-01&enddate=2024-09-30&units=metric&datatypeid=PRCP&datatypeid=TMAX&datatypeid=TMIN&datatypeid=WSF2&datatypeid=AWND&datatypeid=WSF5&datatypeid=WT01&datatypeid=WT02&datatypeid=WT03&datatypeid=WT04&datatypeid=WT05&datatypeid=WT06&datatypeid=WT08&datatypeid=WT11&limit=1000&offset=9001
+2025-09-24 03:27:37,247 - WARNING - Server error detected, waiting 120 seconds...
+2025-09-24 03:29:39,672 - INFO - Collected 9361 records for King County Q3 2024
+2025-09-24 03:30:17,574 - INFO - Collected 9215 records for King County Q4 2024
+2025-09-24 03:30:17,770 - INFO - Saved data for King County 2024: 37194 raw records, 366 daily features
+2025-09-24 03:30:17,771 - INFO -    Success: 366 daily records collected
+2025-09-24 03:30:17,771 - INFO - Sequential collection completed!
+2025-09-24 03:30:17,771 - INFO -    Success rate: 100.0% (72/72)
+2025-09-24 03:30:17,772 - INFO - Data collection completed: 72 successful, 0 failed
+2025-09-24 03:30:17,772 - INFO - Creating unified dataset from collected data...
+2025-09-24 03:30:17,772 - INFO - Creating unified dataset from all collected data
+2025-09-24 03:30:17,787 - INFO - Added 2192 records for Harris County
+2025-09-24 03:30:17,795 - INFO - Added 2192 records for Bexar County
+2025-09-24 03:30:17,803 - INFO - Added 2192 records for Miami-Dade County
+2025-09-24 03:30:17,810 - INFO - Added 2192 records for Orange County
+2025-09-24 03:30:17,817 - INFO - Added 2192 records for Fairfax County
+2025-09-24 03:30:17,827 - INFO - Added 1881 records for San Diego County
+2025-09-24 03:30:17,834 - INFO - Added 2192 records for San Francisco County
+2025-09-24 03:30:17,842 - INFO - Added 2192 records for Suffolk County
+2025-09-24 03:30:17,850 - INFO - Added 2192 records for New York County
+2025-09-24 03:30:17,859 - INFO - Added 2192 records for Cook County
+2025-09-24 03:30:17,868 - INFO - Added 2192 records for Fulton County
+2025-09-24 03:30:17,876 - INFO - Added 2192 records for King County
+2025-09-24 03:30:18,016 - INFO - Created unified dataset: 25993 records across 12 counties
+2025-09-24 03:30:18,151 - INFO - Created unified dataset: 25993 records
+2025-09-24 03:30:18,151 - INFO - Saved to: data/processed/unified_weather_dataset.csv
+2025-09-24 03:30:18,152 - INFO - Starting feature engineering process...
+2025-09-24 03:30:18,173 - INFO - Loaded dataset with 25993 records and 21 columns
+2025-09-24 03:30:18,174 - INFO - Engineering features for FIPS:06073
+2025-09-24 03:30:18,198 - INFO - Created 81 features for FIPS:06073
+2025-09-24 03:30:18,198 - INFO - Engineering features for FIPS:06075
+2025-09-24 03:30:18,212 - INFO - Created 81 features for FIPS:06075
+2025-09-24 03:30:18,212 - INFO - Engineering features for FIPS:12086
+2025-09-24 03:30:18,225 - INFO - Created 81 features for FIPS:12086
+2025-09-24 03:30:18,225 - INFO - Engineering features for FIPS:12095
+2025-09-24 03:30:18,239 - INFO - Created 81 features for FIPS:12095
+2025-09-24 03:30:18,239 - INFO - Engineering features for FIPS:13121
+2025-09-24 03:30:18,252 - INFO - Created 81 features for FIPS:13121
+2025-09-24 03:30:18,252 - INFO - Engineering features for FIPS:17031
+2025-09-24 03:30:18,265 - INFO - Created 81 features for FIPS:17031
+2025-09-24 03:30:18,265 - INFO - Engineering features for FIPS:25025
+2025-09-24 03:30:18,278 - INFO - Created 81 features for FIPS:25025
+2025-09-24 03:30:18,278 - INFO - Engineering features for FIPS:36061
+2025-09-24 03:30:18,292 - INFO - Created 81 features for FIPS:36061
+2025-09-24 03:30:18,292 - INFO - Engineering features for FIPS:48029
+2025-09-24 03:30:18,306 - INFO - Created 81 features for FIPS:48029
+2025-09-24 03:30:18,306 - INFO - Engineering features for FIPS:48201
+2025-09-24 03:30:18,319 - INFO - Created 81 features for FIPS:48201
+2025-09-24 03:30:18,319 - INFO - Engineering features for FIPS:51059
+2025-09-24 03:30:18,332 - INFO - Created 81 features for FIPS:51059
+2025-09-24 03:30:18,332 - INFO - Engineering features for FIPS:53033
+2025-09-24 03:30:18,346 - INFO - Created 81 features for FIPS:53033
+2025-09-24 03:30:18,980 - INFO - Feature engineering completed: 25993 records with 88 features
+2025-09-24 03:30:18,980 - INFO - Saved ML-ready dataset to: data/ml_ready/power_outage_ml_features.csv
+2025-09-24 03:30:19,074 - INFO - Summary report saved to: data/ml_ready/data_processing_summary.txt
+2025-09-24 03:30:19,075 - INFO - Complete workflow finished successfully!

@@ -1,0 +1,41 @@
+Started at : 2025-09-23 16:58:57
+================================================================================
+POWER OUTAGE PREDICTION DATA PROCESSING SUMMARY
+================================================================================
+Processing completed at: 2025-09-24 03:30:19
+
+DATASET OVERVIEW:
+  Total records: 25,993
+  Total features: 88
+  Date range: 2019-01-01 to 2024-12-31
+  Counties covered: 12
+
+COUNTIES PROCESSED:
+  - Bexar County, TX: 2192 daily records
+  - Cook County, IL: 2192 daily records
+  - Fairfax County, VA: 2192 daily records
+  - Fulton County, GA: 2192 daily records
+  - Harris County, TX: 2192 daily records
+  - King County, WA: 2192 daily records
+  - Miami-Dade County, FL: 2192 daily records
+  - New York County, NY: 2192 daily records
+  - Orange County, FL: 2192 daily records
+  - San Diego County, CA: 1881 daily records
+  - San Francisco County, CA: 2192 daily records
+  - Suffolk County, MA: 2192 daily records
+
+FEATURE CATEGORIES:
+  - Temperature stress features (thermal cycling, degree days, extremes)
+  - Precipitation impact features (accumulation, intensity, patterns)
+  - Wind damage features (speed categories, persistency, acceleration)
+  - Compound risk features (ice storms, multiple hazards)
+  - Temporal patterns (seasonal effects, consecutive events)
+
+EXTREME WEATHER EVENTS DETECTED:
+  - heavy_rain: 7995 events total
+  - extreme_rain: 5358 events total
+  - extreme_heat: 22 events total
+  - extreme_cold: 130 events total
+  - damaging_winds: 9 events total
+  - ice_storm_risk: 1294 events total
+  - multiple_extremes: 5495 events total
