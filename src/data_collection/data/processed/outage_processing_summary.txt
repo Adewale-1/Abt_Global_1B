@@ -1,0 +1,24 @@
+columns
+
+fips_code — the county’s ID code, always 5 digits (text).
+ How: taken from the raw file, kept as a string so leading zeros stay (e.g., 06073 = San Diego).
+run_start_time_day — the local calendar day for that county, like 2021-05-09.
+ How: raw timestamps are in UTC → convert to the county’s local timezone (Pacific/Central/Eastern) → take just the date (midnight-to-midnight local).
+any_out — 1 if there was any outage snapshot that day; otherwise 0.
+ How: if the county has at least one row that day, we set it to 1.
+num_out_per_day — how many separate outage bursts happened that day.
+ How: sort snapshots by time; a new event starts if the gap since the previous snapshot is > 30 minutes or the day changes. Count those events in the day.
+minutes_out — total outage minutes seen that day.
+ How: snapshots are every 15 minutes, so it’s 15 × number_of_snapshots_that_day.
+customers_out — the peak number of customers out that day.
+ How: take the maximum customers_out value across all snapshots that day.
+customers_out_mean — the average number of customers out across that day.
+ How: take the mean of customers_out over that day’s snapshots.
+cust_minute_area — total customer-minutes (severity × duration).
+ How: for each snapshot, compute customers_out × 15 minutes, then sum over the day.
+customers_total — total customers in that county.
+ How: looked up from MCC.csv and joined by fips_code.
+pct_out_max — share of customers out at the peak that day.
+ How: customers_out / customers_total.
+pct_out_area — share of customer-minutes relative to everyone being out all day.
+ How: cust_minute_area / (customers_total × 1440), since there are 1440 minutes in a day.
