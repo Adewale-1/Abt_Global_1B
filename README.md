@@ -169,3 +169,81 @@ The processor creates features targeting different outage causes:
 | **state**       | Two-letter state code                        | "TX"                      |
 
 
+# Preprocessing Module
+
+## Preprocessing Step 1: Missing Value Handling
+
+### Components
+
+#### 1. MissingValueAnalyzer
+
+Diagnoses missing data patterns and generates reports.
+
+#### 2. ImputationStrategy (Abstract Base Class)
+
+- `ConstantImputation`: Fill with constant value (0 for binary/precipitation)
+- `ForwardFillImputation`: Carry forward last observation within groups
+- `InterpolationImputation`: Linear interpolation for smooth temporal features
+- `MeanImputation`: Fill with group-wise or global mean
+
+#### 3. MissingValueHandler
+
+Orchestrates imputation pipeline with domain-specific strategies for different feature types.
+
+### Imputation Strategy by Feature Type
+
+| Feature Group                  | Strategy             | Columns Affected  | Rationale                             |
+| ------------------------------ | -------------------- | ----------------- | ------------------------------------- |
+| Weather type codes (WT01-WT11) | Constant (0)         | 8 columns         | Missing indicates event did not occur |
+| Precipitation                  | Constant (0)         | PRCP, PRCP_lag\*  | No precipitation recorded             |
+| Temperature                    | Linear interpolation | TMAX, TMIN, lags  | Smooth temporal variation             |
+| Wind base                      | Forward fill         | WSF2, WSF5, AWND  | Carry forward recent conditions       |
+| Wind derived                   | Group mean           | WSF2_3d_max, etc. | Complex derived features              |
+| Binary indicators              | Constant (0)         | 16 features       | Absence of extreme event              |
+| Outage labels                  | Constant (0)         | 8 features        | No outage observed                    |
+| Continuous derived             | Forward fill         | 8 features        | Maintain temporal continuity          |
+| Stress indices                 | Group mean           | 3 features        | Complex derived metrics               |
+
+## Results
+
+### Before Imputation
+
+- Total missing values: **219,619**
+- Columns with missing: **48 / 108 (44.4%)**
+- Most affected:
+  - WT05: 99.6% missing
+  - WT11: 99.5% missing
+  - WT04: 99.4% missing
+  - Wind measurements: ~9% missing
+
+### After Imputation
+
+- Total missing values: **33,670**
+- Columns with missing: **30 / 108 (27.8%)**
+- Reduction: **84.7%**
+- Remaining missing values primarily in wind measurements for counties without wind sensors
+
+### Key Improvements
+
+- Eliminated all missing values in weather type codes
+- Eliminated all missing values in precipitation features
+- Reduced temperature missing values by 99.4% (144 remaining)
+- Reduced outage label missing values to 0
+- Maintained data integrity with county-grouped imputation
+
+## Usage
+
+### Command Line
+
+```bash
+python src/preprocessing/run_missing_value_imputation.py \
+    --input data/processed/merged_weather_outages_2019_2024_keep_all.csv \
+    --output data/ml_ready/merged_weather_outages_2019_2024_imputed.csv \
+    --report results/reports/missingness_report.csv
+```
+
+
+## Output Files Generated
+
+1. `./data/ml_ready/merged_weather_outages_2019_2024_imputed.csv` - Full imputed dataset (25,993 rows × 108 columns)
+2. `results/reports/missingness_report.csv` - Detailed missing value analysis by column
