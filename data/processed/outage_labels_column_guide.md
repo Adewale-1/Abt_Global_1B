@@ -99,18 +99,3 @@ Below is a plain-English description of every column in your combined+labels CSV
 ### `train_mask`
 - **What:** Convenience flag for training-quality rows.
 - **How:** `True` when `customers_total > 0` **and** `coverage ≥ 0.8`.  
-
-
----
-
-## Which column should be our label?
-
-**Primary training label:** **`pct_out_area_covered`**   
-- **Why:** It measures the **rate of customers affected** **conditional on observed outage minutes**, i.e., the **intensity while out**. That’s robust when some days have short/fragmented outage windows, avoids diluting intensity just because the local day is long (DST) or because outages only occurred briefly.
-
-**Secondary (reporting / comparability):** **`pct_out_area_unified`**  
-- DST-aware full-day rate that’s ideal for **comparing counties/days** on a common basis (entire local day).
-
-**Optional auxiliary targets:**  
-- **`pct_out_max_unified`** (peak severity)  
-- **Binary:** `any_out` (as a first-stage classifier in a hurdle model, given class imbalance)
