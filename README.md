@@ -169,6 +169,60 @@ The processor creates features targeting different outage causes:
 | **state**       | Two-letter state code                        | "TX"                      |
 
 
+# Outage Data Processing (EAGLE-I -----> Daily Labels)
+
+Converts raw EAGLE-I outage snapshots into daily, county-level labels that align with the weather features.
+
+---
+
+## What It Does
+
+### Per-Year Daily Rollups (`make_outage_daily.py`)
+
+- Auto-detects raw schema differences across years (e.g., sum vs customers_out)
+- Converts UTC snapshots to the county’s local calendar day (Pacific/Central/Eastern; DST-aware 23/24/25h)
+- Computes daily metrics from positive snapshots only (no fabricated zero rows):
+
+  - any_out (0/1)
+  - num_out_per_day (event count; new event if gap > 30 min or day changes)
+  - minutes_out
+  - customers_out (daily peak)
+  - customers_out_mean (mean over observed rows)
+  - cust_minute_area (customer-minutes = severity × duration)
+
+- Percent metrics with MCC.csv (customer counts by county):
+  - pct_out_max = customers_out / customers_total
+  - pct_out_area = cust_minute_area / (customers_total × minutes_in_local_day)
+
+---
+
+### Combine All Years (`combine_outages_daily.py`)
+
+- Harmonizes schema/dtypes, zero-pads FIPS, normalizes dates
+- Drops exact duplicates on (fips_code, run_start_time_day)
+- Produces a single multi-year CSV
+
+---
+
+### Add DST-Aware & Coverage-Adjusted Labels (`make_labels_from_combined.py`)
+
+- Adds minutes_in_local_day (23/24/25h by county/day)
+- Infers snapshot_minutes, computes snapshots_count, minutes_observed, coverage
+- Produces two rate labels:
+
+  - pct_out_area_unified = cust_minute_area / (customers_total × minutes_in_local_day) (DST-aware, report-friendly)
+  - pct_out_area_covered = cust_minute_area / (customers_total × minutes_observed) (coverage-adjusted, train-friendly)
+
+- Adds train_mask = (customers_total > 0) & (coverage ≥ 0.8)
+
+---
+
+### Merge with Weather Features (`merge_weather_outages_keep_all.py`)
+
+- Drops overlapping column names from the outage table (except join keys), then left-joins outages → weather
+
+
+
 # Preprocessing Module
 
 ## Preprocessing Step 1: Missing Value Handling
