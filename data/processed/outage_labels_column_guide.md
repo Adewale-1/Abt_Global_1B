@@ -99,7 +99,7 @@ Below is a plain-English description of every column in your combined+labels CSV
 ### `train_mask`
 - **What:** Convenience flag for training-quality rows.
 - **How:** `True` when `customers_total > 0` **and** `coverage ≥ 0.8`.  
-  > With event-only input, this selects days with long, well-observed outages; feel free to relax/tune for your use case or replace with sample weights (e.g., weight by `coverage`).
+
 
 ---
 
