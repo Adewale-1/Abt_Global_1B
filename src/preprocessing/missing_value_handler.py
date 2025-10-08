@@ -271,6 +271,9 @@ class MissingValueHandler:
         """Apply learned imputation strategies."""
         df = df.copy()
 
+        if "run_start_time_day" in df.columns and "day" in df.columns:
+            df["run_start_time_day"] = df["run_start_time_day"].fillna(df["day"])
+
         for name, (strategy, columns) in self.strategies.items():
             cols_present = [c for c in columns if c in df.columns]
             if cols_present:
@@ -280,6 +283,22 @@ class MissingValueHandler:
                     print(
                         f"Applied '{name}': {remaining} missing values remaining in group"
                     )
+
+        for col in df.columns:
+            if df[col].isnull().any():
+                if df[col].dtype in ["float64", "int64"]:
+                    df[col] = df[col].fillna(0)
+                elif df[col].dtype == "object":
+                    if col == "train_mask":
+                        df[col] = df[col].fillna(False).infer_objects(copy=False)
+                    else:
+                        mode_value = (
+                            df[col].mode()[0] if not df[col].mode().empty else None
+                        )
+                        if mode_value is not None:
+                            df[col] = (
+                                df[col].fillna(mode_value).infer_objects(copy=False)
+                            )
 
         return df
 
@@ -321,8 +340,16 @@ class MissingValueHandler:
             ForwardFillImputation(group_cols=["county_fips"]),
             wind_base,
         )
+        self.strategies["wind_base_fallback"] = (
+            ConstantImputation(fill_value=0.0),
+            wind_base,
+        )
         self.strategies["wind_derived"] = (
             MeanImputation(group_cols=["county_fips"]),
+            wind_derived,
+        )
+        self.strategies["wind_derived_fallback"] = (
+            ConstantImputation(fill_value=0.0),
             wind_derived,
         )
 
@@ -358,10 +385,27 @@ class MissingValueHandler:
             "cust_minute_area",
             "pct_out_max",
             "pct_out_area",
+            "pct_out_area_unified",
+            "pct_out_area_covered",
+            "pct_out_max_unified",
         ]
         self.strategies["outage_labels"] = (
             ConstantImputation(fill_value=0.0),
             outage_numeric,
+        )
+
+        outage_metadata = [
+            "customers_total",
+            "minutes_in_local_day",
+            "snapshot_minutes",
+            "snapshots_count",
+            "minutes_observed",
+            "coverage",
+            "train_mask",
+        ]
+        self.strategies["outage_metadata"] = (
+            ForwardFillImputation(group_cols=["county_fips"]),
+            outage_metadata,
         )
 
         continuous_features = [

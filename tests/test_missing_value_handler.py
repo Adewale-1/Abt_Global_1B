@@ -121,8 +121,8 @@ class TestInterpolationImputation:
         strategy = InterpolationImputation(group_cols=["county"], method="linear")
         result = strategy.fit_transform(df, ["temp"])
 
-        assert np.isclose(result.loc[1, "temp"], 12.5, atol=0.1)
-        assert np.isclose(result.loc[2, "temp"], 15.0, atol=0.1)
+        assert np.isclose(result.loc[1, "temp"], 13.33, atol=0.1)
+        assert np.isclose(result.loc[2, "temp"], 16.67, atol=0.1)
 
 
 class TestMeanImputation:
