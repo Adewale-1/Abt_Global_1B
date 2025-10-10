@@ -17,7 +17,8 @@ def cap_outliers_iqr(df: pd.DataFrame, columns=None):
 
 
 def main():
-    df = pd.read_csv("data/processed/merged_weather_outages_2019_2024_keep_all.csv", low_memory=False)
+    input_path = "data/ml_ready/merged_weather_outages_2019_2024_imputed.csv"
+    df = pd.read_csv(input_path, low_memory=False)
     print(f"Loaded {len(df):,} rows × {len(df.columns)} columns\n")
 
     numeric_cols = df.select_dtypes(include=["float64", "int64"]).columns

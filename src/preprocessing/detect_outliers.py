@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset
-df = pd.read_csv("data/processed/merged_weather_outages_2019_2024_keep_all.csv", low_memory=False)
+df = pd.read_csv("data/ml_ready/merged_weather_outages_2019_2024_imputed.csv", low_memory=False)
 
 # Select only numeric columns
 numeric_cols = df.select_dtypes(include=["float64", "int64"]).columns
