@@ -1,0 +1,97 @@
+================================================================================
+LOGISTIC REGRESSION MODEL EVALUATION REPORT
+================================================================================
+Evaluated at: 2025-10-26 11:55:35
+Test Period: 2024 (year 2024 to 2024)
+
+MODEL INFORMATION
+--------------------------------------------------------------------------------
+Model Type: Logistic Regression
+Number of Features: 51
+
+Hyperparameters:
+  solver: liblinear
+  penalty: l1
+  max_iter: 1000
+  class_weight: balanced
+  C: 1
+
+TEST SET COMPOSITION
+--------------------------------------------------------------------------------
+Total Samples: 4,383
+  No-outage (Class 0): 16 (0.37%)
+  Outage (Class 1): 4,367 (99.63%)
+
+PREDICTION DISTRIBUTION
+--------------------------------------------------------------------------------
+  Predicted no-outage: 324 (7.39%)
+  Predicted outage: 4,059 (92.61%)
+
+PRIMARY METRICS (For Imbalanced Classification)
+--------------------------------------------------------------------------------
+Precision-Recall AUC: 0.9999 ** PRIMARY METRIC **
+  (Measures model's ability to distinguish classes in imbalanced data)
+ROC-AUC: 0.9684
+F1-Score: 0.9625
+Precision: 0.9990
+Recall (Sensitivity): 0.9286
+
+BUSINESS METRICS
+--------------------------------------------------------------------------------
+False Negative Rate: 7.14%
+  → Missed 312 outages out of 4,367 actual outages
+  → CRITICAL: These are outages the model failed to predict
+
+False Positive Rate: 25.00%
+  → Incorrectly predicted 4 outages out of 16 no-outage days
+  → COST: These result in unnecessary preventive actions
+
+True Positive Rate (Recall): 92.86%
+  → Successfully detected 4,055 outages
+
+True Negative Rate (Specificity): 75.00%
+  → Correctly identified 12 no-outage days
+
+Confusion Matrix (Raw Counts):
+------------------------------------------------------------
+                      Predicted No-Outage     Predicted Outage
+Actual No-Outage                       12                    4
+Actual Outage                         312                4,055
+
+Confusion Matrix (Percentages by True Class):
+------------------------------------------------------------
+                      Predicted No-Outage     Predicted Outage
+Actual No-Outage                    75.0%                25.0%
+Actual Outage                        7.1%                92.9%
+
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+   No Outage     0.0370    0.7500    0.0706        16
+      Outage     0.9990    0.9286    0.9625      4367
+
+    accuracy                         0.9279      4383
+   macro avg     0.5180    0.8393    0.5165      4383
+weighted avg     0.9955    0.9279    0.9592      4383
+
+
+INTERPRETATION
+--------------------------------------------------------------------------------
+The PR-AUC (Precision-Recall AUC) is the most important metric for this
+imbalanced dataset. It measures how well the model balances precision
+(avoiding false alarms) and recall (detecting actual outages).
+
+With PR-AUC = 0.9999, the model shows strong performance.
+
+The false negative rate indicates the percentage of actual outages that
+were missed by the model. In a safety-critical application, minimizing
+this rate is crucial.
+
+NEXT STEPS
+--------------------------------------------------------------------------------
+1. Review visualizations: python src/models/visualize_results.py
+2. Analyze feature coefficients to understand which weather patterns
+   most strongly predict outages
+3. Consider threshold tuning if business costs of FN vs FP differ
+4. Compare with other models (Random Forest, XGBoost) for improvement

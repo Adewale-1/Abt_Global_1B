@@ -1,9 +1,22 @@
+"""
+DEPRECATED: This script is superseded by enhanced_feature_selection.py
+
+This script was run on a broken dataset (5,922 rows with only 3 counties).
+The results are INVALID and should not be used for modeling.
+
+Use instead: src/preprocessing/enhanced_feature_selection.py
+Results location: results/feature_selection/
+
+Date deprecated: 2025-10-26
+"""
+
 import pandas as pd
 import numpy as np
 from sklearn.feature_selection import VarianceThreshold, SelectKBest, f_classif
 from sklearn.impute import SimpleImputer
 
-# Path to your dataset
+# WARNING: This path points to the corrected dataset, but this script
+# does not properly handle class imbalance or exclude target leakage
 input_path = "../../data/ml_ready/merged_weather_outages_2019_2024_encoded.csv"
 target_col = "any_out"
 
@@ -14,19 +27,21 @@ df.columns = df.columns.str.strip()  # clean column names
 print(f"Loaded {df.shape[0]} rows × {df.shape[1]} columns")
 
 # Drop unwanted columns
-if 'Unnamed: 0' in df.columns:
-    df = df.drop(columns=['Unnamed: 0'])
+if "Unnamed: 0" in df.columns:
+    df = df.drop(columns=["Unnamed: 0"])
     print("Dropped 'Unnamed: 0' column")
 
 # Handle missing values in target
 if df[target_col].isna().any():
-    print(f"Found {df[target_col].isna().sum()} missing values in target '{target_col}'")
+    print(
+        f"Found {df[target_col].isna().sum()} missing values in target '{target_col}'"
+    )
     df = df.dropna(subset=[target_col])
     print(f"After dropping, dataset has {df.shape[0]} rows")
 
 # Impute missing values in features
 feature_cols = df.drop(columns=[target_col]).columns
-imputer = SimpleImputer(strategy='mean')
+imputer = SimpleImputer(strategy="mean")
 df[feature_cols] = imputer.fit_transform(df[feature_cols])
 print(f"Imputed missing values in {len(feature_cols)} features")
 
@@ -36,6 +51,7 @@ df_features = df.drop(columns=[target_col])
 low_variance_cols = df_features.columns[~selector.fit(df_features).get_support()]
 df = df.drop(columns=low_variance_cols)
 print(f"Removed {len(low_variance_cols)} low-variance columns")
+
 
 # Remove highly correlated features
 def correlation_filter(df, threshold=0.95):
@@ -50,6 +66,7 @@ def correlation_filter(df, threshold=0.95):
 
 df = correlation_filter(df, threshold=0.95)
 
+
 # SelectKBest features
 def select_kbest_features(df, target_col, k=50):
     X = df.drop(columns=[target_col])
@@ -60,11 +77,11 @@ def select_kbest_features(df, target_col, k=50):
     print(f"Selected {len(selected_cols)} top features using SelectKBest")
     return df[selected_cols.tolist() + [target_col]]
 
+
 df_kbest = select_kbest_features(df, target_col=target_col, k=50)
 
 print("Final dataset shape:", df_kbest.shape)
 print("Columns selected:", df_kbest.columns.tolist())
-
 
 
 """

@@ -1,0 +1,47 @@
+================================================================================
+TOP FEATURES DRIVING OUTAGE PREDICTIONS
+================================================================================
+Generated at: 2025-10-26 11:56:28
+
+Logistic regression coefficients indicate the strength and direction
+of each feature's influence on outage probability:
+  - Positive coefficients: Feature increases outage risk
+  - Negative coefficients: Feature decreases outage risk
+  - Larger absolute value: Stronger influence
+
+TOP 20 FEATURES BY ABSOLUTE COEFFICIENT VALUE
+--------------------------------------------------------------------------------
+Rank   Feature                                   Coefficient    Direction
+--------------------------------------------------------------------------------
+25     snapshots_count                                4.2217    Increases
+23     climate_zone_tropical                         -3.9812    Decreases
+33     season_spring                                 -2.8751    Decreases
+7      state_NY                                       2.6512    Increases
+10     season_summer                                 -2.6297    Decreases
+16     state_MA                                       2.4114    Increases
+21     WSF2                                           2.3565    Increases
+27     season_winter                                 -2.1373    Decreases
+46     cooling_degree_days                            1.9785    Increases
+38     thermal_stress_index                          -1.5965    Decreases
+22     WSF2_lag1d                                    -1.5804    Decreases
+48     wind_acceleration_1d                          -1.3732    Decreases
+34     TMIN                                          -1.1758    Decreases
+51     temp_range_daily                               0.9687    Increases
+13     WSF2_3d_max                                   -0.9630    Decreases
+26     mechanical_stress_index                        0.9563    Increases
+37     PRCP_3d_sum                                   -0.8422    Decreases
+42     state_FL                                      -0.8168    Decreases
+24     consecutive_rain_days                         -0.6855    Decreases
+5      temp_volatility_3d                             0.6779    Increases
+
+INTERPRETATION
+--------------------------------------------------------------------------------
+The features with the largest positive coefficients are the weather
+patterns most strongly associated with power outages. These could be:
+  - High wind speeds (WSF2, damaging_winds)
+  - Extreme temperatures (extreme_heat, extreme_cold)
+  - Heavy precipitation (extreme_rain, heavy_rain)
+  - Compound risk factors (ice_storm_risk, wet_windy_combo)
+
+Features with negative coefficients indicate conditions associated
+with lower outage risk (e.g., mild weather, stable conditions).

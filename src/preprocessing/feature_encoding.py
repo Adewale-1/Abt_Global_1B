@@ -27,18 +27,18 @@ def load_data(input_path):
 
 def analyze_categorical_columns(df, special_cols, cardinality_threshold=10):
     categorical_cols = df.select_dtypes(include=["object", "category"]).columns.tolist()
-    
+
     print("=" * 70)
     print("CATEGORICAL COLUMNS ANALYSIS")
     print("=" * 70)
     print(f"Found {len(categorical_cols)} categorical columns:\n")
-    
+
     low_cardinality = []
     high_cardinality = []
-    
+
     for col in categorical_cols:
         unique_count = df[col].nunique()
-        
+
         if col in special_cols:
             print(f"  {col:30s} {unique_count:5d} unique  [SPECIAL]")
         elif unique_count < cardinality_threshold:
@@ -47,57 +47,59 @@ def analyze_categorical_columns(df, special_cols, cardinality_threshold=10):
         else:
             high_cardinality.append(col)
             print(f"  {col:30s} {unique_count:5d} unique  [LABEL]")
-    
+
     print()
     return low_cardinality, high_cardinality
 
 
-def handle_datetime_column(df, col_name='day'):
+def handle_datetime_column(df, col_name="day"):
     if col_name not in df.columns:
         return df
-    
+
     print(f"Converting '{col_name}' to datetime features...")
     df[col_name] = pd.to_datetime(df[col_name])
-    df['day_of_week'] = df[col_name].dt.dayofweek
-    df['day_of_year'] = df[col_name].dt.dayofyear
-    df['month'] = df[col_name].dt.month
-    df['year'] = df[col_name].dt.year
+    df["day_of_week"] = df[col_name].dt.dayofweek
+    df["day_of_year"] = df[col_name].dt.dayofyear
+    df["month"] = df[col_name].dt.month
+    df["year"] = df[col_name].dt.year
     df = df.drop(col_name, axis=1)
     print("Created: day_of_week, day_of_year, month, year\n")
     return df
 
-#Convert boolean column to binary (0/1)
-def handle_binary_column(df, col_name='train_mask'):
+
+# Convert boolean column to binary (0/1)
+def handle_binary_column(df, col_name="train_mask"):
     if col_name not in df.columns:
         return df
-    
+
     print(f"Converting '{col_name}' to binary...")
     null_count = df[col_name].isnull().sum()
-    
+
     if null_count > 0:
         print(f"  ⚠ Found {null_count} NaN values, filling with False")
         df[col_name] = df[col_name].fillna(False).infer_objects(copy=False)
-    
+
     df[col_name] = df[col_name].astype(int)
     print("Converted to 0/1\n")
     return df
 
-# Lable encoding for high-cardinality columns 
+
+# Lable encoding for high-cardinality columns
 def label_encode_columns(df, columns):
     if not columns:
         print("No high-cardinality columns to encode\n")
         return df
-    
+
     print("=" * 70)
     print("LABEL ENCODING")
     print("=" * 70)
-    
+
     for col in columns:
         le = LabelEncoder()
-        df[col + '_encoded'] = le.fit_transform(df[col].astype(str))
+        df[col + "_encoded"] = le.fit_transform(df[col].astype(str))
         df = df.drop(col, axis=1)
         print(f" {col:30s} → {col}_encoded")
-    
+
     print(f"\nLabel encoded {len(columns)} columns\n")
     return df
 
@@ -106,7 +108,7 @@ def one_hot_encode_columns(df, columns):
     if not columns:
         print("No low-cardinality columns to encode\n")
         return df
-    
+
     print("=" * 70)
     print("ONE-HOT ENCODING")
     print("=" * 70)
@@ -115,20 +117,21 @@ def one_hot_encode_columns(df, columns):
     print(f"  Complete\n")
     return df
 
+
 def validate_encoding(df):
     print("=" * 70)
     print("VALIDATION")
     print("=" * 70)
-    
+
     remaining = df.select_dtypes(include=["object", "category"]).columns.tolist()
-    
+
     if remaining:
         print(f"Warning: {len(remaining)} categorical columns remain:")
         for col in remaining:
             print(f"  - {col}")
     else:
         print("All categorical columns encoded successfully")
-    
+
     print()
 
 
@@ -158,38 +161,85 @@ def print_summary(original_cols, final_cols, special_count, label_count, onehot_
 def main():
     # Setup paths
     script_dir = os.path.dirname(__file__)
-    input_path = os.path.join(script_dir, "../../data/ml_ready/merged_weather_outages_2019_2024_standardized.csv")
+    input_path = os.path.join(
+        script_dir,
+        "../../data/ml_ready/merged_weather_outages_2019_2024_standardized.csv",
+    )
     input_path = os.path.normpath(input_path)
-    
+
     output_dir = os.path.join(script_dir, "../../data/ml_ready")
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, 'merged_weather_outages_2019_2024_encoded.csv')
-    
+    output_path = os.path.join(
+        output_dir, "merged_weather_outages_2019_2024_encoded.csv"
+    )
+
     # Load data
     df = load_data(input_path)
     original_cols = df.shape[1]
-    
+    original_rows = df.shape[0]
+
+    # Save original target for validation
+    original_target = df["any_out"].copy()
+
+    # Pre-encoding validation
+    print("=" * 70)
+    print("PRE-ENCODING VALIDATION")
+    print("=" * 70)
+    print(f"Shape: {df.shape}")
+    print(f"any_out distribution: {df['any_out'].value_counts().to_dict()}")
+    print(f"Outage rate: {df['any_out'].mean():.2%}")
+    assert (
+        df["any_out"].nunique() >= 2
+    ), "ERROR: Only one class present before encoding!"
+    print("✅ Both classes present\n")
+
     # Analyze columns
-    special_cols = ['day', 'train_mask']
+    special_cols = ["day", "train_mask"]
     low_card_cols, high_card_cols = analyze_categorical_columns(df, special_cols)
-    
+
     # Handle special columns
     print("=" * 70)
     print("SPECIAL COLUMN HANDLING")
     print("=" * 70)
-    df = handle_datetime_column(df, 'day')
-    df = handle_binary_column(df, 'train_mask')
-    
+    df = handle_datetime_column(df, "day")
+    df = handle_binary_column(df, "train_mask")
+
     # Apply encoding
     df = label_encode_columns(df, high_card_cols)
     df = one_hot_encode_columns(df, low_card_cols)
-    
-    # Validate and save
+
+    # Validate encoding
     validate_encoding(df)
+
+    # Post-encoding validation: Verify target preserved
+    print("=" * 70)
+    print("POST-ENCODING VALIDATION")
+    print("=" * 70)
+    assert (
+        len(df) == original_rows
+    ), f"ERROR: Row count changed from {original_rows} to {len(df)}"
+    assert "any_out" in df.columns, "ERROR: Target variable 'any_out' was dropped!"
+    assert (
+        df["any_out"] == original_target
+    ).all(), "ERROR: Target variable was modified!"
+
+    print(f"✅ Rows preserved: {len(df):,}")
+    print(f"✅ Target preserved: any_out")
+    print(f"   Distribution: {df['any_out'].value_counts().to_dict()}")
+    print(f"   Outage rate: {df['any_out'].mean():.2%}\n")
+
+    # Save dataset
     save_dataset(df, output_path)
-    
+
     # Print summary
-    print_summary(original_cols, df.shape[1], len(special_cols), len(high_card_cols), len(low_card_cols))
+    print_summary(
+        original_cols,
+        df.shape[1],
+        len(special_cols),
+        len(high_card_cols),
+        len(low_card_cols),
+    )
+
 
 if __name__ == "__main__":
     main()

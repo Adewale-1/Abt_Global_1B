@@ -301,3 +301,194 @@ python src/preprocessing/run_missing_value_imputation.py \
 
 1. `./data/ml_ready/merged_weather_outages_2019_2024_imputed.csv` - Full imputed dataset (25,993 rows × 108 columns)
 2. `results/reports/missingness_report.csv` - Detailed missing value analysis by column
+
+
+## Model Creation
+## Logistic Regression
+
+### Step 1: Train the Model
+
+```bash
+cd /Users/adewaleadenle/Downloads/Dev/BTT_project
+python src/models/train_logistic_regression.py
+```
+
+
+**What it does:**
+
+- Loads encoded dataset (25,993 rows × 120 columns)
+- Uses 51 selected features from feature selection
+- Temporal split: 2019-2022 (train), 2023 (val), 2024 (test)
+- Tests 20 random hyperparameter combinations
+- Saves best model to `models/trained/logistic_regression_best.pkl`
+- Saves training log to `results/models/logistic_regression_training_log.txt`
+
+
+### Step 2: Evaluate the Model
+
+```bash
+python src/models/evaluate_model.py
+```
+
+**What it does:**
+
+- Loads trained model
+- Evaluates on 2024 test set
+- Generates comprehensive metrics report
+- Saves predictions with probabilities
+- Outputs: `results/models/logistic_regression_evaluation.txt`
+
+
+### Step 3: Generate Visualizations
+
+```bash
+python src/models/visualize_results.py
+```
+
+## Key Features
+
+### Hyperparameter Tuning
+
+The model tests 20 random combinations of:
+
+- **C**: [0.001, 0.01, 0.1, 1, 10, 100] (regularization strength)
+- **penalty**: ['l1', 'l2'] (regularization type)
+- **solver**: ['liblinear', 'saga'] (optimization algorithm)
+- **max_iter**: [1000, 2000] (convergence iterations)
+- **class_weight**: ['balanced'] (fixed to handle imbalance)
+
+### Evaluation Metrics
+
+**Primary Metrics (for imbalanced data):**
+
+- Precision-Recall AUC (most important)
+- ROC-AUC
+- F1-Score
+
+### Temporal Split Rationale
+
+The dataset uses temporal split instead of random split(sklearn train_test_split) because:
+
+1. Features include lag values (1-3 days)
+2. Features include rolling windows (3, 7, 14 days)
+3. Random split would leak future information into training
+
+**Split Strategy:**
+
+- Train: 2019-2022 (4 years for learning patterns)
+- Validation: 2023 (1 year for hyperparameter tuning)
+- Test: 2024 (1 year for final evaluation)
+
+### Class Imbalance Handling
+
+The dataset has severe class imbalance:
+
+- No-outage: 4.36% (minority class)
+- Outage: 95.64% (majority class)
+
+**Solution:** `class_weight='balanced'`
+
+- Automatically calculates weights: n_samples / (n_classes × class_count)
+- Minority class weight: ~22x (penalizes misclassifying no-outage days heavily)
+- Majority class weight: ~0.05x (lower penalty for outage misclassification)
+
+This forces the model to pay attention to both classes instead of simply predicting "outage" for everything.
+
+## Interpreting Results
+
+### Precision-Recall AUC (Primary Metric)
+
+- **> 0.8**: Strong performance
+- **0.6 - 0.8**: Moderate performance
+- **< 0.6**: Baseline/weak performance
+
+For imbalanced classification, PR-AUC is more informative than ROC-AUC because it focuses on the minority class performance.
+
+### Feature Coefficients
+
+- **Positive coefficients**: Weather patterns that increase outage risk
+- **Negative coefficients**: Conditions that decrease outage risk
+- **Larger absolute value**: Stronger influence on predictions
+
+Expected important features:
+
+- High wind speeds (WSF2, damaging_winds)
+- Extreme temperatures (extreme_heat, extreme_cold)
+- Heavy precipitation (extreme_rain, heavy_rain)
+- Compound risk factors (ice_storm_risk, wet_windy_combo)
+
+
+## Result
+Model saved to :models/trained/logistic_regression_best.pkl
+
+### - Test Set (2024) Accuracy: 92.79%
+
+  However, I need to explain why accuracy is misleading for your dataset:
+
+  #### Why Accuracy is Deceptive Here
+  Your test set has extreme class imbalance:
+  No-outage: 16 samples (0.37%)
+  Outage: 4,367 samples (99.63%)
+  A "dumb model" that always predicts "outage" would get 99.63% accuracy without learning anything useful!
+
+### - PR-AUC: 0.9999 (99.99%)
+  Means it perfectly distinguishes between classes despite the severe imbalance
+### - ROC-AUC: 0.9684 (96.84%)
+  Means it catches most actual outages
+### - F1-Score: 0.9625 (96.25%)
+  Means when it predicts an outage, it's almost always correct
+
+
+## Data Visualization
+Visuals saved to : /Users/adewaleadenle/Downloads/Dev/BTT_project/results/figures/logistic_regression/
+
+
+### 1. Confusion Matrix
+Shows the model's classification performance with both raw counts and percentages.
+
+![Confusion Matrix](results/figures/logistic_regression/confusion_matrix.png)
+
+**Interpretation:**
+- Top-left (12): Correctly predicted no-outage days (75%)
+- Top-right (4): False alarms - predicted outage but no outage occurred (25%)
+- Bottom-left (312): Missed outages - failed to predict actual outages (7.1%)
+- Bottom-right (4,055): Correctly predicted outages (92.9%)
+
+
+
+### 2. Precision-Recall Curve (PRIMARY METRIC)
+The most important metric for imbalanced classification.
+
+![Precision-Recall Curve](results/figures/logistic_regression/precision_recall_curve.png)
+
+**PR-AUC: 0.9999** - Near-perfect performance at balancing precision and recall.
+
+
+
+### 3. ROC Curve
+Standard classification performance metric.
+
+![ROC Curve](results/figures/logistic_regression/roc_curve.png)
+
+**ROC-AUC: 0.9684** - Excellent discrimination between classes.
+
+
+
+### 4. Feature Coefficients
+Shows which weather patterns drive outage predictions.
+
+![Feature Coefficients](results/figures/logistic_regression/feature_coefficients.png)
+
+**Green bars**: Weather conditions that INCREASE outage risk  
+**Red bars**: Conditions that DECREASE outage risk
+
+
+
+### 5. Prediction Distribution
+Histogram showing how well the model separates the two classes.
+
+![Prediction Distribution](results/figures/logistic_regression/prediction_distribution.png)
+
+**Blue**: Actual no-outage days  
+**Red**: Actual outage days  
+Good separation indicates the model distinguishes classes well.
