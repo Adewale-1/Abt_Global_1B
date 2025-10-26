@@ -423,10 +423,10 @@ Model saved to :models/trained/logistic_regression_best.pkl
 
 ### - Test Set (2024) Accuracy: 92.79%
 
-  However, I need to explain why accuracy is misleading for your dataset:
+  However, I need to explain why accuracy is misleading for the dataset:
 
   #### Why Accuracy is Deceptive Here
-  Your test set has extreme class imbalance:
+  The test set has extreme class imbalance:
   No-outage: 16 samples (0.37%)
   Outage: 4,367 samples (99.63%)
   A "dumb model" that always predicts "outage" would get 99.63% accuracy without learning anything useful!
