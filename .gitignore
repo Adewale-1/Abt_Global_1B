@@ -2,3 +2,24 @@
 .env
 
 .venv/
+@'
+# data (keep raw/out-of-repo datasets out)
+data/raw/
+data/ml_ready/merged_weather_outages_*.csv
+
+# notebooks checkpoints, cache
+**/.ipynb_checkpoints/
+**/__pycache__/
+
+# secrets
+.env
+*.env
+*.token
+*.key
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+'@ | Out-File -FilePath .gitignore -Encoding utf8 -Append

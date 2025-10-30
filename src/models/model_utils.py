@@ -210,22 +210,34 @@ class ModelUtils:
 
         return model, hyperparameters
 
-    def save_results(
-        self, results: str, filename: str, results_subdir: str = "models"
-    ) -> None:
+
+    # inside src/models/model_utils.py
+    def save_results(self, results, filename: str, subdir: str = "models"):
         """
-        Save text results to file.
-
-        use this for saving training logs, evaluation reports, etc.
+        Write text or JSON-like results to results/<subdir>/<filename> using UTF-8.
+        Creates directories as needed.
         """
-        results_path = self.results_dir / results_subdir
-        results_path.mkdir(parents=True, exist_ok=True)
+        out_path = self.results_dir / subdir / filename
+        out_path.parent.mkdir(parents=True, exist_ok=True)
 
-        output_file = results_path / filename
-        with open(output_file, "w") as f:
-            f.write(results)
+        # Normalize to string (keep JSON pretty if dict)
+        if isinstance(results, dict):
+            try:
+                import json
+                payload = json.dumps(results, ensure_ascii=False, indent=2)
+            except Exception:
+                payload = str(results)
+        elif isinstance(results, (list, tuple)):
+            payload = "\n".join(map(str, results))  # ✅ remove [str]
 
-        print(f"Results saved to: {output_file}")
+        else:
+            payload = str(results)
+
+        # Write as UTF-8 so symbols like “≈” don’t crash on Windows
+        with open(out_path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(payload)
+
+        print(f"Results saved to: {out_path}")
 
     def log_results(self, message: str, log_file: str = None) -> None:
         """
