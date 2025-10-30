@@ -1,0 +1,3 @@
+Durbin-Watson: 0.3085
+Breusch-Pagan LM: 277.5396, p-value: 0.000000
+Breusch-Pagan F : 6.3723, p-value: 0.000000

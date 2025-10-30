@@ -1,0 +1,27 @@
+================================================================================
+LINEAR REGRESSION EVALUATION REPORT
+================================================================================
+Evaluated at: 2025-10-30 01:22:26
+Test Period: 2024
+
+PRIMARY METRICS
+--------------------------------------------------------------------------------
+RMSE: 0.0204
+MAE : 0.0017
+R²  : -0.0008
+
+ARTIFACTS
+--------------------------------------------------------------------------------
+Predictions CSV: C:\Users\Owner\.cursor\ABT Global\Abt_Global_1B\results\models\linear_regression_predictions.csv
+County×Season heatmaps: error_by_county_rmse.png / error_by_county_mae.png
+County×Month  heatmaps: error_by_month_rmse.png / error_by_month_mae.png
+Decile error: C:\Users\Owner\.cursor\ABT Global\Abt_Global_1B\results\figures\linear_regression\error_by_target_decile.png
+Residual QQ: C:\Users\Owner\.cursor\ABT Global\Abt_Global_1B\results\figures\linear_regression\residuals_qq.png
+Residual ACF: C:\Users\Owner\.cursor\ABT Global\Abt_Global_1B\results\figures\linear_regression\residuals_acf.png
+Diagnostics: C:\Users\Owner\.cursor\ABT Global\Abt_Global_1B\results\models\linear_regression_diagnostics.txt
+
+NOTES
+--------------------------------------------------------------------------------
+Use error-by-county/month heatmaps to identify hotspots of under/over-prediction.
+Decile plot checks calibration across outage magnitude—watch for high-MAPE in top deciles.
+DW≈2 suggests no autocorrelation; BP p<0.05 indicates heteroscedasticity.
