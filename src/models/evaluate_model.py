@@ -279,14 +279,6 @@ def main():
             "were missed by the model. In a safety-critical application, minimizing",
             "this rate is crucial.",
             "",
-            "NEXT STEPS",
-            "-" * 80,
-            "1. Review visualizations: python src/models/visualize_results.py",
-            "2. Analyze feature coefficients to understand which weather patterns",
-            "   most strongly predict outages",
-            "3. Consider threshold tuning if business costs of FN vs FP differ",
-            "4. Compare with other models (Random Forest, XGBoost) for improvement",
-            "",
         ]
     )
 

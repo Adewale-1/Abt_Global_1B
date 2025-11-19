@@ -264,12 +264,11 @@ def main():
         filename="logistic_regression_training_log.txt",
     )
 
-    print("\n" + "=" * 80)
+    print("\n")
     print("TRAINING COMPLETE!")
-    print("=" * 80)
     print(f"\nNext steps:")
-    print("1. Run evaluation: python src/models/evaluate_model.py")
-    print("2. Generate visualizations: python src/models/visualize_results.py")
+    print("  Run evaluation: python src/models/evaluate_model.py")
+    print("  Generate visualizations: python src/models/visualize_results.py")
 
 
 if __name__ == "__main__":
