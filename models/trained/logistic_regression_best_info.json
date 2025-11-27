@@ -54,23 +54,23 @@
     "PRCP_lag1d",
     "temp_range_daily"
   ],
-  "train_samples": 17306,
-  "val_samples": 4304,
-  "test_samples": 4383,
+  "train_samples": 17321,
+  "val_samples": 4331,
+  "test_samples": 4341,
   "class_distribution_train": {
-    "0": 1111,
-    "1": 16195
+    "0": 896,
+    "1": 16425
   },
   "class_weights": {
-    "0": 7.788478847884789,
-    "1": 0.5343007100957086
+    "0": 9.665736607142858,
+    "1": 0.5272754946727549
   },
   "cv_strategy": "StratifiedKFold(n_splits=5)",
   "n_iter": 20,
-  "best_cv_score": 0.988063388912901,
-  "val_roc_auc": 0.7067690160502441,
-  "val_pr_auc": 0.9994960252728826,
-  "test_roc_auc": 0.9683993588275704,
-  "test_pr_auc": 0.9998772102389961,
-  "saved_at": "2025-10-26 11:50:58"
+  "best_cv_score": 0.9852551871787094,
+  "val_roc_auc": 0.9863038714390066,
+  "val_pr_auc": 0.9992339540697617,
+  "test_roc_auc": 0.9585354585354585,
+  "test_pr_auc": 0.9998744593582373,
+  "saved_at": "2025-11-27 17:28:43"
 }

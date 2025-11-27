@@ -492,3 +492,23 @@ Histogram showing how well the model separates the two classes.
 **Blue**: Actual no-outage days  
 **Red**: Actual outage days  
 Good separation indicates the model distinguishes classes well.
+
+# Per County Model 
+
+## Fulton and King County
+
+#### 1. Fulton County, GA
+-   **Best Hyperparameters**: `solver='liblinear'`, `penalty='l1'`, `max_iter=1000`, `class_weight='balanced'`, `C=100`
+-   **Test Performance (2022)**:
+    -   **Accuracy**: 0.9973 (Almost perfect)
+    -   **ROC AUC**: 0.0000 (Due to single-class test set)
+    -   **F1 Score**: 0.9986
+    -   **Note**: The test set (2022) had **only outage days** (all 1s). The model correctly predicted 364/365 days as outages.
+
+#### 2. King County, WA
+-   **Best Hyperparameters**: `solver='liblinear'`, `penalty='l1'`, `max_iter=1000`, `class_weight='balanced'`, `C=10`
+-   **Test Performance (2022)**:
+    -   **Accuracy**: 0.9973
+    -   **ROC AUC**: 0.0000 (Single-class test set)
+    -   **F1 Score**: 0.9986
+    -   **Note**: Identical situation—2022 data for King County only contained outage days.
