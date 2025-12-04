@@ -1,0 +1,236 @@
+{
+    "Miami_Dade_County_FL": {
+        "threshold_used": 0.00024102866224295,
+        "threshold_pct": "0.0241%",
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l2",
+            "max_iter": 1000,
+            "class_weight": "balanced",
+            "C": 1
+        },
+        "best_cv_score": 0.7621523022846916,
+        "test_metrics": {
+            "accuracy": 0.6383561643835617,
+            "roc_auc": 0.6980961561633933,
+            "pr_auc": 0.7257155533754153,
+            "f1": 0.639344262295082
+        },
+        "test_class_distribution": {
+            "non_severe": 172,
+            "severe": 193
+        },
+        "report": {
+            "0": {
+                "precision": 0.6041666666666666,
+                "recall": 0.6744186046511628,
+                "f1-score": 0.6373626373626373,
+                "support": 172.0
+            },
+            "1": {
+                "precision": 0.6763005780346821,
+                "recall": 0.6062176165803109,
+                "f1-score": 0.639344262295082,
+                "support": 193.0
+            },
+            "accuracy": 0.6383561643835617,
+            "macro avg": {
+                "precision": 0.6402336223506744,
+                "recall": 0.6403181106157368,
+                "f1-score": 0.6383534498288597,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 0.64230870747222,
+                "recall": 0.6383561643835617,
+                "f1-score": 0.6384104554776012,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                116,
+                56
+            ],
+            [
+                76,
+                117
+            ]
+        ],
+        "threshold_analysis": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 187,
+                "severe": 2005,
+                "severe_ratio": 0.9146897810218978,
+                "balance_score": 0.4146897810218978
+            },
+            {
+                "threshold": 0.00024102866224295,
+                "non_severe": 1096,
+                "severe": 1096,
+                "severe_ratio": 0.5,
+                "balance_score": 0.0
+            },
+            {
+                "threshold": 0.00013430327672045,
+                "non_severe": 392,
+                "severe": 1800,
+                "severe_ratio": 0.8211678832116789,
+                "balance_score": 0.3211678832116789
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 1399,
+                "severe": 793,
+                "severe_ratio": 0.36177007299270075,
+                "balance_score": 0.13822992700729925
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 1898,
+                "severe": 294,
+                "severe_ratio": 0.13412408759124086,
+                "balance_score": 0.36587591240875916
+            },
+            {
+                "threshold": 0.001,
+                "non_severe": 2118,
+                "severe": 74,
+                "severe_ratio": 0.03375912408759124,
+                "balance_score": 0.46624087591240876
+            },
+            {
+                "threshold": 0.005,
+                "non_severe": 2187,
+                "severe": 5,
+                "severe_ratio": 0.002281021897810219,
+                "balance_score": 0.4977189781021898
+            },
+            {
+                "threshold": 0.01,
+                "non_severe": 2189,
+                "severe": 3,
+                "severe_ratio": 0.0013686131386861315,
+                "balance_score": 0.49863138686131386
+            }
+        ]
+    },
+    "Orange_County_FL": {
+        "threshold_used": 0.00013430327672045,
+        "threshold_pct": "0.0134%",
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l1",
+            "max_iter": 1000,
+            "class_weight": "balanced",
+            "C": 1
+        },
+        "best_cv_score": 0.7466976054168171,
+        "test_metrics": {
+            "accuracy": 0.7150684931506849,
+            "roc_auc": 0.7558195488721806,
+            "pr_auc": 0.774729353978792,
+            "f1": 0.7189189189189189
+        },
+        "test_class_distribution": {
+            "non_severe": 175,
+            "severe": 190
+        },
+        "report": {
+            "0": {
+                "precision": 0.6918918918918919,
+                "recall": 0.7314285714285714,
+                "f1-score": 0.7111111111111111,
+                "support": 175.0
+            },
+            "1": {
+                "precision": 0.7388888888888889,
+                "recall": 0.7,
+                "f1-score": 0.7189189189189189,
+                "support": 190.0
+            },
+            "accuracy": 0.7150684931506849,
+            "macro avg": {
+                "precision": 0.7153903903903904,
+                "recall": 0.7157142857142857,
+                "f1-score": 0.715015015015015,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 0.7163560821095067,
+                "recall": 0.7150684931506849,
+                "f1-score": 0.7151754494220247,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                128,
+                47
+            ],
+            [
+                57,
+                133
+            ]
+        ],
+        "threshold_analysis": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 880,
+                "severe": 1312,
+                "severe_ratio": 0.5985401459854015,
+                "balance_score": 0.0985401459854015
+            },
+            {
+                "threshold": 0.00024102866224295,
+                "non_severe": 1509,
+                "severe": 683,
+                "severe_ratio": 0.3115875912408759,
+                "balance_score": 0.18841240875912407
+            },
+            {
+                "threshold": 0.00013430327672045,
+                "non_severe": 1096,
+                "severe": 1096,
+                "severe_ratio": 0.5,
+                "balance_score": 0.0
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 1631,
+                "severe": 561,
+                "severe_ratio": 0.25593065693430656,
+                "balance_score": 0.24406934306569344
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 1908,
+                "severe": 284,
+                "severe_ratio": 0.12956204379562045,
+                "balance_score": 0.3704379562043796
+            },
+            {
+                "threshold": 0.001,
+                "non_severe": 2104,
+                "severe": 88,
+                "severe_ratio": 0.040145985401459854,
+                "balance_score": 0.45985401459854014
+            },
+            {
+                "threshold": 0.005,
+                "non_severe": 2177,
+                "severe": 15,
+                "severe_ratio": 0.006843065693430657,
+                "balance_score": 0.4931569343065693
+            },
+            {
+                "threshold": 0.01,
+                "non_severe": 2180,
+                "severe": 12,
+                "severe_ratio": 0.005474452554744526,
+                "balance_score": 0.49452554744525545
+            }
+        ]
+    }
+}
