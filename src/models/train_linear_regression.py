@@ -269,12 +269,11 @@ def main():
     ])
     utils.save_results("\n".join(lines), filename="linear_regression_training_log.txt")
 
-    print("\n" + "=" * 80)
+    print("\n")
     print("TRAINING COMPLETE!")
-    print("=" * 80)
     print("Next steps:")
-    print("  1) Evaluate: python src/models/evaluate_regression.py")
-    print("  2) Visualize: python src/models/visualize_regression_results.py")
+    print("  Evaluate: python src/models/evaluate_regression.py")
+    print("  Visualize: python src/models/visualize_regression_results.py")
 
 
 if __name__ == "__main__":

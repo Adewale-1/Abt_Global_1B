@@ -1,0 +1,59 @@
+================================================================================
+MULTICLASS LOGISTIC REGRESSION TRAINING LOG
+================================================================================
+Completed at: 2025-11-01 10:42:25
+
+THRESHOLD INFORMATION
+--------------------------------------------------------------------------------
+Severity threshold: 1%
+
+HYPERPARAMETER TUNING RESULTS
+--------------------------------------------------------------------------------
+Total combinations tested: 20
+Best CV neg_log_loss: -0.6162
+
+Best Hyperparameters:
+  solver: lbfgs
+  penalty: l2
+  multi_class: multinomial
+  max_iter: 2000
+  class_weight: balanced
+  C: 0.01
+
+VALIDATION SET PERFORMANCE
+--------------------------------------------------------------------------------
+Log Loss: 0.6774
+Accuracy: 0.6963
+Macro F1: 0.2835
+Weighted F1: 0.8169
+
+TEST SET PERFORMANCE (Preliminary)
+--------------------------------------------------------------------------------
+Log Loss: 0.6528
+Accuracy: 0.7182
+Macro F1: 0.3120
+Weighted F1: 0.8237
+
+TOP 10 CV RESULTS
+--------------------------------------------------------------------------------
+Rank 1: Mean=-0.6162, Std=0.0205, C=0.01, penalty=l2, solver=lbfgs, max_iter=2000
+Rank 2: Mean=-0.6184, Std=0.0209, C=10.0, penalty=l2, solver=lbfgs, max_iter=2000
+Rank 3: Mean=-0.6290, Std=0.0440, C=0.1, penalty=l2, solver=lbfgs, max_iter=1000
+Rank 4: Mean=-0.6357, Std=0.0291, C=100.0, penalty=l2, solver=lbfgs, max_iter=1000
+Rank 5: Mean=-0.6499, Std=0.0200, C=0.001, penalty=l2, solver=lbfgs, max_iter=1000
+Rank 6: Mean=-0.6564, Std=0.0202, C=1.0, penalty=l2, solver=lbfgs, max_iter=1000
+Rank 7: Mean=-0.8886, Std=0.1709, C=0.001, penalty=l1, solver=saga, max_iter=2000
+Rank 8: Mean=-1.0084, Std=0.1979, C=0.001, penalty=l2, solver=saga, max_iter=2000
+Rank 9: Mean=-1.0761, Std=0.4755, C=0.01, penalty=l1, solver=saga, max_iter=2000
+Rank 10: Mean=-5.2741, Std=8.6116, C=0.01, penalty=l1, solver=saga, max_iter=1000
+
+FEATURE INFORMATION
+--------------------------------------------------------------------------------
+Number of features: 51
+Features: PRCP_lag2d, heating_degree_days, state_TX, county_name_encoded, temp_volatility_3d, month, state_NY, PRCP_lag3d, TMAX, season_summer...
+
+CLASS WEIGHT ANALYSIS
+--------------------------------------------------------------------------------
+Class 0 (No Outage): 1,111 samples, weight: 5.19x
+Class 1 (Minor): 16,135 samples, weight: 0.36x
+Class 2 (Severe): 60 samples, weight: 96.14x

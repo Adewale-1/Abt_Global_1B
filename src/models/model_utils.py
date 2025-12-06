@@ -100,28 +100,61 @@ class ModelUtils:
         test_df = df[test_mask]
 
         print(f"Train set: {len(train_df):,} rows (years 2019-2022)")
-        print(
-            f"  - No-outage: {(train_df[target_col] == 0).sum():,} ({(train_df[target_col] == 0).mean():.2%})"
-        )
-        print(
-            f"  - Outage: {(train_df[target_col] == 1).sum():,} ({(train_df[target_col] == 1).mean():.2%})"
-        )
+
+        if target_col == "outage_severity":
+            for class_label, class_name in [
+                (0, "No Outage"),
+                (1, "Minor"),
+                (2, "Severe"),
+            ]:
+                count = (train_df[target_col] == class_label).sum()
+                pct = (train_df[target_col] == class_label).mean()
+                print(f"  - {class_name}: {count:,} ({pct:.2%})")
+        else:
+            print(
+                f"  - No-outage: {(train_df[target_col] == 0).sum():,} ({(train_df[target_col] == 0).mean():.2%})"
+            )
+            print(
+                f"  - Outage: {(train_df[target_col] == 1).sum():,} ({(train_df[target_col] == 1).mean():.2%})"
+            )
 
         print(f"\nValidation set: {len(val_df):,} rows (year 2023)")
-        print(
-            f"  - No-outage: {(val_df[target_col] == 0).sum():,} ({(val_df[target_col] == 0).mean():.2%})"
-        )
-        print(
-            f"  - Outage: {(val_df[target_col] == 1).sum():,} ({(val_df[target_col] == 1).mean():.2%})"
-        )
+
+        if target_col == "outage_severity":
+            for class_label, class_name in [
+                (0, "No Outage"),
+                (1, "Minor"),
+                (2, "Severe"),
+            ]:
+                count = (val_df[target_col] == class_label).sum()
+                pct = (val_df[target_col] == class_label).mean()
+                print(f"  - {class_name}: {count:,} ({pct:.2%})")
+        else:
+            print(
+                f"  - No-outage: {(val_df[target_col] == 0).sum():,} ({(val_df[target_col] == 0).mean():.2%})"
+            )
+            print(
+                f"  - Outage: {(val_df[target_col] == 1).sum():,} ({(val_df[target_col] == 1).mean():.2%})"
+            )
 
         print(f"\nTest set: {len(test_df):,} rows (year 2024)")
-        print(
-            f"  - No-outage: {(test_df[target_col] == 0).sum():,} ({(test_df[target_col] == 0).mean():.2%})"
-        )
-        print(
-            f"  - Outage: {(test_df[target_col] == 1).sum():,} ({(test_df[target_col] == 1).mean():.2%})"
-        )
+
+        if target_col == "outage_severity":
+            for class_label, class_name in [
+                (0, "No Outage"),
+                (1, "Minor"),
+                (2, "Severe"),
+            ]:
+                count = (test_df[target_col] == class_label).sum()
+                pct = (test_df[target_col] == class_label).mean()
+                print(f"  - {class_name}: {count:,} ({pct:.2%})")
+        else:
+            print(
+                f"  - No-outage: {(test_df[target_col] == 0).sum():,} ({(test_df[target_col] == 0).mean():.2%})"
+            )
+            print(
+                f"  - Outage: {(test_df[target_col] == 1).sum():,} ({(test_df[target_col] == 1).mean():.2%})"
+            )
 
         return train_df, val_df, test_df
 
@@ -162,25 +195,21 @@ class ModelUtils:
         - Hyperparameters (JSON)
         - Training metadata (JSON)
         """
-        # ensure the models directory exists
+
         self.models_dir.mkdir(parents=True, exist_ok=True)
 
-        # save the model
         model_path = self.models_dir / f"{model_name}.pkl"
         joblib.dump(model, model_path)
         print(f"\nModel saved to: {model_path}")
 
-        # save hyperparameters if provided
         if hyperparameters:
             params_path = self.models_dir / f"{model_name}_params.json"
             with open(params_path, "w") as f:
                 json.dump(hyperparameters, f, indent=2)
             print(f"Hyperparameters saved to: {params_path}")
 
-        # save training info if provided
         if training_info:
             info_path = self.models_dir / f"{model_name}_info.json"
-            # add timestamp to training info
             training_info["saved_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             with open(info_path, "w") as f:
                 json.dump(training_info, f, indent=2)
@@ -192,7 +221,6 @@ class ModelUtils:
 
         return both the model and its parameters for full context.
         """
-        # load the model
         model_path = self.models_dir / f"{model_name}.pkl"
         if not model_path.exists():
             raise FileNotFoundError(f"Model not found: {model_path}")
@@ -200,7 +228,6 @@ class ModelUtils:
         model = joblib.load(model_path)
         print(f"Model loaded from: {model_path}")
 
-        # load hyperparameters if they exist
         params_path = self.models_dir / f"{model_name}_params.json"
         hyperparameters = {}
         if params_path.exists():
@@ -209,7 +236,6 @@ class ModelUtils:
             print(f"Hyperparameters loaded from: {params_path}")
 
         return model, hyperparameters
-
 
     # inside src/models/model_utils.py
     def save_results(self, results, filename: str, subdir: str = "models"):
@@ -220,15 +246,15 @@ class ModelUtils:
         out_path = self.results_dir / subdir / filename
         out_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Normalize to string (keep JSON pretty if dict)
         if isinstance(results, dict):
             try:
                 import json
+
                 payload = json.dumps(results, ensure_ascii=False, indent=2)
             except Exception:
                 payload = str(results)
         elif isinstance(results, (list, tuple)):
-            payload = "\n".join(map(str, results))  # ✅ remove [str]
+            payload = "\n".join(map(str, results))
 
         else:
             payload = str(results)
@@ -256,6 +282,47 @@ class ModelUtils:
             with open(log_path, "a") as f:
                 f.write(formatted_message + "\n")
 
+    def load_best_threshold(self) -> float:
+        """
+        Load the best threshold from threshold analysis results.
+        """
+        threshold_path = self.results_dir / "models" / "best_threshold.json"
+        if not threshold_path.exists():
+            raise FileNotFoundError(
+                f"Threshold file not found: {threshold_path}\n"
+                "Run analyze_severity_thresholds.py first"
+            )
+
+        with open(threshold_path, "r") as f:
+            data = json.load(f)
+
+        return float(data["best_threshold"])
+
+    def create_severity_target(
+        self, df: pd.DataFrame, threshold: float, col: str = "pct_out_area_unified"
+    ) -> pd.Series:
+        """
+        Create 3-class severity target variable based on threshold.
+
+        Class 0: No outage (pct_out_area_unified == 0)
+        Class 1: Minor outage (0 < pct_out_area_unified < threshold)
+        Class 2: Severe outage (pct_out_area_unified >= threshold)
+
+        Returns:
+            Series with severity classes (0, 1, or 2)
+        """
+        if col not in df.columns:
+            raise ValueError(f"Column '{col}' not found in dataframe")
+
+        conditions = [
+            df[col] == 0,
+            (df[col] > 0) & (df[col] < threshold),
+            df[col] >= threshold,
+        ]
+        choices = [0, 1, 2]
+
+        return pd.Series(np.select(conditions, choices, default=0), index=df.index)
+
 
 def get_class_weights_info(y: pd.Series) -> Dict[str, float]:
     """
@@ -271,7 +338,7 @@ def get_class_weights_info(y: pd.Series) -> Dict[str, float]:
     class_weights = {}
 
     for class_label, count in class_counts.items():
-        # use the same formula as sklearn's 'balanced' mode
+        # used the same formula as sklearn's 'balanced' mode
         weight = n_samples / (n_classes * count)
         class_weights[int(class_label)] = weight
 

@@ -1,5 +1,13 @@
 {
-  "model_type": "LogisticRegression",
+  "model_type": "LogisticRegression (Multiclass)",
+  "resampling_method": "undersample",
+  "n_classes": 3,
+  "class_names": [
+    "No Outage",
+    "Minor",
+    "Severe"
+  ],
+  "threshold_used": 0.01,
   "n_features": 51,
   "feature_names": [
     "PRCP_lag2d",
@@ -54,23 +62,30 @@
     "PRCP_lag1d",
     "temp_range_daily"
   ],
-  "train_samples": 17321,
-  "val_samples": 4331,
-  "test_samples": 4341,
+  "train_samples_before": "N/A",
+  "train_samples_after": 180,
+  "val_samples": 4304,
+  "test_samples": 4383,
   "class_distribution_train": {
-    "0": 896,
-    "1": 16425
+    "0": 60,
+    "1": 60,
+    "2": 60
   },
   "class_weights": {
-    "0": 9.665736607142858,
-    "1": 0.5272754946727549
+    "0": 1.0,
+    "1": 1.0,
+    "2": 1.0
   },
   "cv_strategy": "StratifiedKFold(n_splits=5)",
   "n_iter": 20,
-  "best_cv_score": 0.9852551871787094,
-  "val_roc_auc": 0.9863038714390066,
-  "val_pr_auc": 0.9992339540697617,
-  "test_roc_auc": 0.9585354585354585,
-  "test_pr_auc": 0.9998744593582373,
-  "saved_at": "2025-11-27 17:28:43"
+  "best_cv_score": -0.6511866571810154,
+  "val_log_loss": 0.8191298788062246,
+  "val_accuracy": 0.5634293680297398,
+  "val_macro_f1": 0.24588422793772233,
+  "val_weighted_f1": 0.7172846040417912,
+  "test_log_loss": 0.7932106713624043,
+  "test_accuracy": 0.5861282226785307,
+  "test_macro_f1": 0.2766389275391496,
+  "test_weighted_f1": 0.7265632627592076,
+  "saved_at": "2025-11-01 10:28:21"
 }

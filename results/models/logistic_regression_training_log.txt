@@ -1,12 +1,12 @@
 ================================================================================
 LOGISTIC REGRESSION TRAINING LOG
 ================================================================================
-Completed at: 2025-10-30 22:06:30
+Completed at: 2025-11-27 17:28:43
 
 HYPERPARAMETER TUNING RESULTS
 --------------------------------------------------------------------------------
 Total combinations tested: 20
-Best CV ROC-AUC: 0.9881
+Best CV ROC-AUC: 0.9853
 
 Best Hyperparameters:
   solver: liblinear
@@ -17,26 +17,26 @@ Best Hyperparameters:
 
 VALIDATION SET PERFORMANCE
 --------------------------------------------------------------------------------
-ROC-AUC: 0.7068
-PR-AUC: 0.9995
+ROC-AUC: 0.9863
+PR-AUC: 0.9992
 
 TEST SET PERFORMANCE (Preliminary)
 --------------------------------------------------------------------------------
-ROC-AUC: 0.9684
+ROC-AUC: 0.9585
 PR-AUC: 0.9999
 
 TOP 10 CV RESULTS
 --------------------------------------------------------------------------------
-Rank 1: Mean=0.9881, Std=0.0017, C=1.0, penalty=l1, solver=liblinear
-Rank 2: Mean=0.9871, Std=0.0033, C=100.0, penalty=l1, solver=liblinear
-Rank 3: Mean=0.9836, Std=0.0013, C=0.01, penalty=l1, solver=liblinear
-Rank 3: Mean=0.9836, Std=0.0013, C=0.01, penalty=l1, solver=liblinear
-Rank 5: Mean=0.9810, Std=0.0006, C=0.001, penalty=l1, solver=liblinear
-Rank 6: Mean=0.9499, Std=0.0383, C=1.0, penalty=l2, solver=liblinear
-Rank 7: Mean=0.9330, Std=0.0338, C=0.001, penalty=l2, solver=liblinear
-Rank 8: Mean=0.8739, Std=0.0046, C=0.01, penalty=l1, solver=saga
-Rank 9: Mean=0.8739, Std=0.0046, C=10.0, penalty=l2, solver=saga
-Rank 9: Mean=0.8739, Std=0.0046, C=10.0, penalty=l1, solver=saga
+Rank 1: Mean=0.9853, Std=0.0014, C=1.0, penalty=l1, solver=liblinear
+Rank 2: Mean=0.9845, Std=0.0021, C=100.0, penalty=l1, solver=liblinear
+Rank 3: Mean=0.9801, Std=0.0015, C=0.01, penalty=l1, solver=liblinear
+Rank 3: Mean=0.9801, Std=0.0015, C=0.01, penalty=l1, solver=liblinear
+Rank 5: Mean=0.9792, Std=0.0023, C=0.001, penalty=l1, solver=liblinear
+Rank 6: Mean=0.9706, Std=0.0089, C=1.0, penalty=l2, solver=liblinear
+Rank 7: Mean=0.9579, Std=0.0145, C=0.001, penalty=l2, solver=liblinear
+Rank 8: Mean=0.8648, Std=0.0134, C=0.01, penalty=l1, solver=saga
+Rank 9: Mean=0.8648, Std=0.0134, C=100.0, penalty=l1, solver=saga
+Rank 9: Mean=0.8648, Std=0.0134, C=10.0, penalty=l1, solver=saga
 
 FEATURE INFORMATION
 --------------------------------------------------------------------------------
@@ -45,8 +45,8 @@ Features: PRCP_lag2d, heating_degree_days, state_TX, county_name_encoded, temp_v
 
 CLASS WEIGHT ANALYSIS
 --------------------------------------------------------------------------------
-Class 0 (no-outage) weight: 7.79x
+Class 0 (no-outage) weight: 9.67x
 Class 1 (outage) weight: 0.53x
 
 This means the model penalizes errors on the minority class (no-outage)
-7.8x more than the majority class (outage).
+9.7x more than the majority class (outage).

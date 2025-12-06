@@ -1,0 +1,18 @@
+{
+  "best_threshold": 0.01,
+  "best_threshold_pct": "1%",
+  "selected_at": "2025-11-01 10:40:33",
+  "class_distribution": {
+    "no_outage_count": 1132,
+    "minor_count": 24742,
+    "severe_count": 119,
+    "no_outage_pct": 0.04355018658869696,
+    "minor_pct": 0.9518716577540107,
+    "severe_pct": 0.004578155657292348
+  },
+  "balance_metrics": {
+    "min_class_pct": 0.004578155657292348,
+    "std_class_pct": 0.5360242054996994,
+    "balance_score": 0.00040234053738002877
+  }
+}

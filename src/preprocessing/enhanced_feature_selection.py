@@ -539,15 +539,14 @@ def main():
     # Export results
     selector.export_results(output_dir, consensus_features, feature_counts, categories)
 
-    print("\n" + "=" * 70)
+    print("\n")
     print("FEATURE SELECTION COMPLETE")
-    print("=" * 70)
     print(f"\nSelected {len(consensus_features)} features for modeling")
     print(f"Results saved to: {output_dir}")
     print("\nNext steps:")
-    print("  1. Review selected features in: results/feature_selection/")
-    print("  2. Use selected_features.csv for model training")
-    print("  3. Check feature_selection_report.md for detailed analysis")
+    print("  Review selected features in: results/feature_selection/")
+    print("  Use selected_features.csv for model training")
+    print("  Check feature_selection_report.md for detailed analysis")
 
 
 if __name__ == "__main__":

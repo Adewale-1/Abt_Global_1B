@@ -1,0 +1,84 @@
+================================================================================
+MULTICLASS LOGISTIC REGRESSION EVALUATION REPORT
+================================================================================
+Generated at: 2025-11-01 10:42:40
+
+MODEL INFORMATION
+--------------------------------------------------------------------------------
+Model: Multiclass Logistic Regression
+Threshold Used: 1%
+Number of Features: 51
+
+TEST SET INFORMATION
+--------------------------------------------------------------------------------
+Total Samples: 4,383
+No Outage: 16 (0.37%)
+Minor: 4,322 (98.61%)
+Severe: 45 (1.03%)
+
+PRIMARY METRICS
+--------------------------------------------------------------------------------
+Log Loss: 0.6528
+Accuracy: 0.7182
+Macro F1-Score: 0.3120
+Weighted F1-Score: 0.8237
+Macro Precision: 0.3483
+Weighted Precision: 0.9781
+Macro Recall: 0.6129
+Weighted Recall: 0.7182
+
+Confusion Matrix (Raw Counts):
+--------------------------------------------------------------------------------
+                          Pred No   Pred Minor  Pred Severe
+Actual No Outage                9            7            0
+Actual Minor                  581        3,114          627
+Actual Severe                   0           20           25
+
+Confusion Matrix (Percentages by True Class):
+--------------------------------------------------------------------------------
+                          Pred No   Pred Minor  Pred Severe
+Actual No Outage            56.2%        43.8%         0.0%
+Actual Minor                13.4%        72.0%        14.5%
+Actual Severe                0.0%        44.4%        55.6%
+
+PER-CLASS METRICS
+--------------------------------------------------------------------------------
+
+No Outage:
+  Precision: 0.0153
+  Recall: 0.5625
+  F1-Score: 0.0297
+  Support: 16
+  True Positives: 9
+  False Positives: 581
+  False Negatives: 7
+
+Minor:
+  Precision: 0.9914
+  Recall: 0.7205
+  F1-Score: 0.8345
+  Support: 4,322
+  True Positives: 3,114
+  False Positives: 27
+  False Negatives: 1,208
+
+Severe:
+  Precision: 0.0383
+  Recall: 0.5556
+  F1-Score: 0.0717
+  Support: 45
+  True Positives: 25
+  False Positives: 627
+  False Negatives: 20
+
+DETAILED CLASSIFICATION REPORT
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+   No Outage     0.0153    0.5625    0.0297        16
+       Minor     0.9914    0.7205    0.8345      4322
+      Severe     0.0383    0.5556    0.0717        45
+
+    accuracy                         0.7182      4383
+   macro avg     0.3483    0.6129    0.3120      4383
+weighted avg     0.9781    0.7182    0.8237      4383

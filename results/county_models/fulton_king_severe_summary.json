@@ -1,0 +1,236 @@
+{
+    "Fulton_County_GA": {
+        "threshold_used": 0.0002,
+        "threshold_pct": "0.0200%",
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l1",
+            "max_iter": 1000,
+            "class_weight": "balanced",
+            "C": 1
+        },
+        "best_cv_score": 0.7636911976072577,
+        "test_metrics": {
+            "accuracy": 0.7095890410958904,
+            "roc_auc": 0.7583318212060728,
+            "pr_auc": 0.8057506901849685,
+            "f1": 0.7119565217391305
+        },
+        "test_class_distribution": {
+            "non_severe": 167,
+            "severe": 198
+        },
+        "report": {
+            "0": {
+                "precision": 0.6564102564102564,
+                "recall": 0.7664670658682635,
+                "f1-score": 0.7071823204419889,
+                "support": 167.0
+            },
+            "1": {
+                "precision": 0.7705882352941177,
+                "recall": 0.6616161616161617,
+                "f1-score": 0.7119565217391305,
+                "support": 198.0
+            },
+            "accuracy": 0.7095890410958904,
+            "macro avg": {
+                "precision": 0.713499245852187,
+                "recall": 0.7140416137422125,
+                "f1-score": 0.7095694210905596,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 0.7183478997499948,
+                "recall": 0.7095890410958904,
+                "f1-score": 0.7097721611456439,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                128,
+                39
+            ],
+            [
+                67,
+                131
+            ]
+        ],
+        "threshold_analysis": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 566,
+                "severe": 1626,
+                "severe_ratio": 0.7417883211678832,
+                "balance_score": 0.24178832116788318
+            },
+            {
+                "threshold": 0.00015,
+                "non_severe": 829,
+                "severe": 1363,
+                "severe_ratio": 0.6218065693430657,
+                "balance_score": 0.12180656934306566
+            },
+            {
+                "threshold": 0.0002,
+                "non_severe": 1057,
+                "severe": 1135,
+                "severe_ratio": 0.5177919708029197,
+                "balance_score": 0.01779197080291972
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 1332,
+                "severe": 860,
+                "severe_ratio": 0.39233576642335766,
+                "balance_score": 0.10766423357664234
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 1664,
+                "severe": 528,
+                "severe_ratio": 0.24087591240875914,
+                "balance_score": 0.25912408759124084
+            },
+            {
+                "threshold": 0.001,
+                "non_severe": 1965,
+                "severe": 227,
+                "severe_ratio": 0.10355839416058395,
+                "balance_score": 0.39644160583941607
+            },
+            {
+                "threshold": 0.005,
+                "non_severe": 2158,
+                "severe": 34,
+                "severe_ratio": 0.01551094890510949,
+                "balance_score": 0.4844890510948905
+            },
+            {
+                "threshold": 0.01,
+                "non_severe": 2177,
+                "severe": 15,
+                "severe_ratio": 0.006843065693430657,
+                "balance_score": 0.4931569343065693
+            }
+        ]
+    },
+    "King_County_WA": {
+        "threshold_used": 0.00015,
+        "threshold_pct": "0.0150%",
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l1",
+            "max_iter": 1000,
+            "class_weight": "balanced",
+            "C": 1
+        },
+        "best_cv_score": 0.7044938627050696,
+        "test_metrics": {
+            "accuracy": 0.6219178082191781,
+            "roc_auc": 0.6745263157894736,
+            "pr_auc": 0.670999937949911,
+            "f1": 0.6349206349206349
+        },
+        "test_class_distribution": {
+            "non_severe": 190,
+            "severe": 175
+        },
+        "report": {
+            "0": {
+                "precision": 0.6604938271604939,
+                "recall": 0.5631578947368421,
+                "f1-score": 0.6079545454545454,
+                "support": 190.0
+            },
+            "1": {
+                "precision": 0.5911330049261084,
+                "recall": 0.6857142857142857,
+                "f1-score": 0.6349206349206349,
+                "support": 175.0
+            },
+            "accuracy": 0.6219178082191781,
+            "macro avg": {
+                "precision": 0.6258134160433011,
+                "recall": 0.6244360902255639,
+                "f1-score": 0.6214375901875901,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 0.6272386384179803,
+                "recall": 0.6219178082191781,
+                "f1-score": 0.6208834924588348,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                107,
+                83
+            ],
+            [
+                55,
+                120
+            ]
+        ],
+        "threshold_analysis": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 815,
+                "severe": 1377,
+                "severe_ratio": 0.6281934306569343,
+                "balance_score": 0.12819343065693434
+            },
+            {
+                "threshold": 0.00015,
+                "non_severe": 1112,
+                "severe": 1080,
+                "severe_ratio": 0.4927007299270073,
+                "balance_score": 0.007299270072992692
+            },
+            {
+                "threshold": 0.0002,
+                "non_severe": 1325,
+                "severe": 867,
+                "severe_ratio": 0.395529197080292,
+                "balance_score": 0.104470802919708
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 1588,
+                "severe": 604,
+                "severe_ratio": 0.2755474452554745,
+                "balance_score": 0.22445255474452552
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 1827,
+                "severe": 365,
+                "severe_ratio": 0.166514598540146,
+                "balance_score": 0.333485401459854
+            },
+            {
+                "threshold": 0.001,
+                "non_severe": 2032,
+                "severe": 160,
+                "severe_ratio": 0.072992700729927,
+                "balance_score": 0.42700729927007297
+            },
+            {
+                "threshold": 0.005,
+                "non_severe": 2150,
+                "severe": 42,
+                "severe_ratio": 0.01916058394160584,
+                "balance_score": 0.48083941605839414
+            },
+            {
+                "threshold": 0.01,
+                "non_severe": 2167,
+                "severe": 25,
+                "severe_ratio": 0.011405109489051095,
+                "balance_score": 0.4885948905109489
+            }
+        ]
+    }
+}
