@@ -1,0 +1,920 @@
+{
+    "Miami_Dade_County_FL": {
+        "county_fips": 12086,
+        "thresholds_tested": [
+            0.0001,
+            0.00024102866224295,
+            0.00013430327672045,
+            0.0003,
+            0.0005,
+            0.001,
+            0.005,
+            0.01
+        ],
+        "threshold_analysis": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 187,
+                "severe": 2005,
+                "severe_ratio": 0.9146897810218978,
+                "balance_score": 0.4146897810218978
+            },
+            {
+                "threshold": 0.00024102866224295,
+                "non_severe": 1096,
+                "severe": 1096,
+                "severe_ratio": 0.5,
+                "balance_score": 0.0
+            },
+            {
+                "threshold": 0.00013430327672045,
+                "non_severe": 392,
+                "severe": 1800,
+                "severe_ratio": 0.8211678832116789,
+                "balance_score": 0.3211678832116789
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 1399,
+                "severe": 793,
+                "severe_ratio": 0.36177007299270075,
+                "balance_score": 0.13822992700729925
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 1898,
+                "severe": 294,
+                "severe_ratio": 0.13412408759124086,
+                "balance_score": 0.36587591240875916
+            },
+            {
+                "threshold": 0.001,
+                "non_severe": 2118,
+                "severe": 74,
+                "severe_ratio": 0.03375912408759124,
+                "balance_score": 0.46624087591240876
+            },
+            {
+                "threshold": 0.005,
+                "non_severe": 2187,
+                "severe": 5,
+                "severe_ratio": 0.002281021897810219,
+                "balance_score": 0.4977189781021898
+            },
+            {
+                "threshold": 0.01,
+                "non_severe": 2189,
+                "severe": 3,
+                "severe_ratio": 0.0013686131386861315,
+                "balance_score": 0.49863138686131386
+            }
+        ],
+        "most_balanced_threshold": {
+            "threshold": 0.00024102866224295,
+            "threshold_pct": "0.0241%",
+            "severe_ratio": 0.5
+        },
+        "best_f1_threshold": {
+            "threshold": 0.0001,
+            "threshold_pct": "0.0100%",
+            "f1": 0.8707037643207856
+        },
+        "models_by_threshold": [
+            {
+                "threshold": 0.0001,
+                "threshold_pct": "0.0100%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 128,
+                    "severe": 1333
+                },
+                "test_class_distribution": {
+                    "non_severe": 27,
+                    "severe": 338
+                },
+                "overall_class_distribution": {
+                    "non_severe": 187,
+                    "severe": 2005,
+                    "severe_ratio": 0.9146897810218978
+                },
+                "best_cv_score": 0.8430066220001169,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.7835616438356164,
+                    "roc_auc": 0.843962305500767,
+                    "pr_auc": 0.9846730646370756,
+                    "f1": 0.8707037643207856
+                },
+                "confusion_matrix": [
+                    [
+                        20,
+                        7
+                    ],
+                    [
+                        72,
+                        266
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p00010.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p00010.csv"
+            },
+            {
+                "threshold": 0.00024102866224295,
+                "threshold_pct": "0.0241%",
+                "is_most_balanced_threshold": true,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 739,
+                    "severe": 722
+                },
+                "test_class_distribution": {
+                    "non_severe": 172,
+                    "severe": 193
+                },
+                "overall_class_distribution": {
+                    "non_severe": 1096,
+                    "severe": 1096,
+                    "severe_ratio": 0.5
+                },
+                "best_cv_score": 0.7621523022846916,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l2",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.6383561643835617,
+                    "roc_auc": 0.6980961561633933,
+                    "pr_auc": 0.7257155533754153,
+                    "f1": 0.639344262295082
+                },
+                "confusion_matrix": [
+                    [
+                        116,
+                        56
+                    ],
+                    [
+                        76,
+                        117
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p00024.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p00024.csv"
+            },
+            {
+                "threshold": 0.00013430327672045,
+                "threshold_pct": "0.0134%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 269,
+                    "severe": 1192
+                },
+                "test_class_distribution": {
+                    "non_severe": 56,
+                    "severe": 309
+                },
+                "overall_class_distribution": {
+                    "non_severe": 392,
+                    "severe": 1800,
+                    "severe_ratio": 0.8211678832116789
+                },
+                "best_cv_score": 0.8082111247698995,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.6712328767123288,
+                    "roc_auc": 0.771208969024503,
+                    "pr_auc": 0.9440147748696022,
+                    "f1": 0.7752808988764045
+                },
+                "confusion_matrix": [
+                    [
+                        38,
+                        18
+                    ],
+                    [
+                        102,
+                        207
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p00013.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p00013.csv"
+            },
+            {
+                "threshold": 0.0003,
+                "threshold_pct": "0.0300%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 944,
+                    "severe": 517
+                },
+                "test_class_distribution": {
+                    "non_severe": 219,
+                    "severe": 146
+                },
+                "overall_class_distribution": {
+                    "non_severe": 1399,
+                    "severe": 793,
+                    "severe_ratio": 0.36177007299270075
+                },
+                "best_cv_score": 0.7852120666750909,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.6876712328767123,
+                    "roc_auc": 0.7249014824544944,
+                    "pr_auc": 0.6665646893681955,
+                    "f1": 0.5957446808510638
+                },
+                "confusion_matrix": [
+                    [
+                        167,
+                        52
+                    ],
+                    [
+                        62,
+                        84
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p00030.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p00030.csv"
+            },
+            {
+                "threshold": 0.0005,
+                "threshold_pct": "0.0500%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1260,
+                    "severe": 201
+                },
+                "test_class_distribution": {
+                    "non_severe": 322,
+                    "severe": 43
+                },
+                "overall_class_distribution": {
+                    "non_severe": 1898,
+                    "severe": 294,
+                    "severe_ratio": 0.13412408759124086
+                },
+                "best_cv_score": 0.8028193960511034,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l2",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.7479452054794521,
+                    "roc_auc": 0.7428138090423226,
+                    "pr_auc": 0.40021844555564595,
+                    "f1": 0.3611111111111111
+                },
+                "confusion_matrix": [
+                    [
+                        247,
+                        75
+                    ],
+                    [
+                        17,
+                        26
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p00050.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p00050.csv"
+            },
+            {
+                "threshold": 0.001,
+                "threshold_pct": "0.1000%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1413,
+                    "severe": 48
+                },
+                "test_class_distribution": {
+                    "non_severe": 351,
+                    "severe": 14
+                },
+                "overall_class_distribution": {
+                    "non_severe": 2118,
+                    "severe": 74,
+                    "severe_ratio": 0.03375912408759124
+                },
+                "best_cv_score": 0.8688909772865866,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l2",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.8657534246575342,
+                    "roc_auc": 0.8880748880748881,
+                    "pr_auc": 0.37050946137238994,
+                    "f1": 0.2898550724637681
+                },
+                "confusion_matrix": [
+                    [
+                        306,
+                        45
+                    ],
+                    [
+                        4,
+                        10
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p00100.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p00100.csv"
+            },
+            {
+                "threshold": 0.005,
+                "threshold_pct": "0.5000%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1459,
+                    "severe": 2
+                },
+                "test_class_distribution": {
+                    "non_severe": 363,
+                    "severe": 2
+                },
+                "overall_class_distribution": {
+                    "non_severe": 2187,
+                    "severe": 5,
+                    "severe_ratio": 0.002281021897810219
+                },
+                "best_cv_score": NaN,
+                "best_params": {
+                    "solver": "saga",
+                    "penalty": "l2",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.005479452054794521,
+                    "roc_auc": 1.0,
+                    "pr_auc": 1.0,
+                    "f1": 0.010899182561307902
+                },
+                "confusion_matrix": [
+                    [
+                        0,
+                        363
+                    ],
+                    [
+                        0,
+                        2
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p00500.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p00500.csv"
+            },
+            {
+                "threshold": 0.01,
+                "threshold_pct": "1.0000%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1459,
+                    "severe": 2
+                },
+                "test_class_distribution": {
+                    "non_severe": 364,
+                    "severe": 1
+                },
+                "overall_class_distribution": {
+                    "non_severe": 2189,
+                    "severe": 3,
+                    "severe_ratio": 0.0013686131386861315
+                },
+                "best_cv_score": NaN,
+                "best_params": {
+                    "solver": "saga",
+                    "penalty": "l2",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.0027397260273972603,
+                    "roc_auc": 0.5,
+                    "pr_auc": 0.0027397260273972603,
+                    "f1": 0.00546448087431694
+                },
+                "confusion_matrix": [
+                    [
+                        0,
+                        364
+                    ],
+                    [
+                        0,
+                        1
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Miami_Dade_County_FL_severe_logreg_0p01000.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Miami_Dade_County_FL_severe_2022_predictions_0p01000.csv"
+            }
+        ]
+    },
+    "Orange_County_FL": {
+        "county_fips": 12095,
+        "thresholds_tested": [
+            0.0001,
+            0.00024102866224295,
+            0.00013430327672045,
+            0.0003,
+            0.0005,
+            0.001,
+            0.005,
+            0.01
+        ],
+        "threshold_analysis": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 880,
+                "severe": 1312,
+                "severe_ratio": 0.5985401459854015,
+                "balance_score": 0.0985401459854015
+            },
+            {
+                "threshold": 0.00024102866224295,
+                "non_severe": 1509,
+                "severe": 683,
+                "severe_ratio": 0.3115875912408759,
+                "balance_score": 0.18841240875912407
+            },
+            {
+                "threshold": 0.00013430327672045,
+                "non_severe": 1096,
+                "severe": 1096,
+                "severe_ratio": 0.5,
+                "balance_score": 0.0
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 1631,
+                "severe": 561,
+                "severe_ratio": 0.25593065693430656,
+                "balance_score": 0.24406934306569344
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 1908,
+                "severe": 284,
+                "severe_ratio": 0.12956204379562045,
+                "balance_score": 0.3704379562043796
+            },
+            {
+                "threshold": 0.001,
+                "non_severe": 2104,
+                "severe": 88,
+                "severe_ratio": 0.040145985401459854,
+                "balance_score": 0.45985401459854014
+            },
+            {
+                "threshold": 0.005,
+                "non_severe": 2177,
+                "severe": 15,
+                "severe_ratio": 0.006843065693430657,
+                "balance_score": 0.4931569343065693
+            },
+            {
+                "threshold": 0.01,
+                "non_severe": 2180,
+                "severe": 12,
+                "severe_ratio": 0.005474452554744526,
+                "balance_score": 0.49452554744525545
+            }
+        ],
+        "most_balanced_threshold": {
+            "threshold": 0.00013430327672045,
+            "threshold_pct": "0.0134%",
+            "severe_ratio": 0.5
+        },
+        "best_f1_threshold": {
+            "threshold": 0.0001,
+            "threshold_pct": "0.0100%",
+            "f1": 0.75
+        },
+        "models_by_threshold": [
+            {
+                "threshold": 0.0001,
+                "threshold_pct": "0.0100%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 591,
+                    "severe": 870
+                },
+                "test_class_distribution": {
+                    "non_severe": 141,
+                    "severe": 224
+                },
+                "overall_class_distribution": {
+                    "non_severe": 880,
+                    "severe": 1312,
+                    "severe_ratio": 0.5985401459854015
+                },
+                "best_cv_score": 0.7737114600369662,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.7095890410958904,
+                    "roc_auc": 0.7532611448834854,
+                    "pr_auc": 0.8314674831679529,
+                    "f1": 0.75
+                },
+                "confusion_matrix": [
+                    [
+                        100,
+                        41
+                    ],
+                    [
+                        65,
+                        159
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p00010.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p00010.csv"
+            },
+            {
+                "threshold": 0.00024102866224295,
+                "threshold_pct": "0.0241%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1015,
+                    "severe": 446
+                },
+                "test_class_distribution": {
+                    "non_severe": 240,
+                    "severe": 125
+                },
+                "overall_class_distribution": {
+                    "non_severe": 1509,
+                    "severe": 683,
+                    "severe_ratio": 0.3115875912408759
+                },
+                "best_cv_score": 0.7433669735490734,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.6684931506849315,
+                    "roc_auc": 0.7388666666666667,
+                    "pr_auc": 0.6114079779506687,
+                    "f1": 0.5813148788927336
+                },
+                "confusion_matrix": [
+                    [
+                        160,
+                        80
+                    ],
+                    [
+                        41,
+                        84
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p00024.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p00024.csv"
+            },
+            {
+                "threshold": 0.00013430327672045,
+                "threshold_pct": "0.0134%",
+                "is_most_balanced_threshold": true,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 736,
+                    "severe": 725
+                },
+                "test_class_distribution": {
+                    "non_severe": 175,
+                    "severe": 190
+                },
+                "overall_class_distribution": {
+                    "non_severe": 1096,
+                    "severe": 1096,
+                    "severe_ratio": 0.5
+                },
+                "best_cv_score": 0.7466976054168171,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.7150684931506849,
+                    "roc_auc": 0.7558195488721806,
+                    "pr_auc": 0.774729353978792,
+                    "f1": 0.7189189189189189
+                },
+                "confusion_matrix": [
+                    [
+                        128,
+                        47
+                    ],
+                    [
+                        57,
+                        133
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p00013.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p00013.csv"
+            },
+            {
+                "threshold": 0.0003,
+                "threshold_pct": "0.0300%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1094,
+                    "severe": 367
+                },
+                "test_class_distribution": {
+                    "non_severe": 263,
+                    "severe": 102
+                },
+                "overall_class_distribution": {
+                    "non_severe": 1631,
+                    "severe": 561,
+                    "severe_ratio": 0.25593065693430656
+                },
+                "best_cv_score": 0.7509972304083976,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.6821917808219178,
+                    "roc_auc": 0.7626556325952435,
+                    "pr_auc": 0.5925771961558008,
+                    "f1": 0.546875
+                },
+                "confusion_matrix": [
+                    [
+                        179,
+                        84
+                    ],
+                    [
+                        32,
+                        70
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p00030.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p00030.csv"
+            },
+            {
+                "threshold": 0.0005,
+                "threshold_pct": "0.0500%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1284,
+                    "severe": 177
+                },
+                "test_class_distribution": {
+                    "non_severe": 302,
+                    "severe": 63
+                },
+                "overall_class_distribution": {
+                    "non_severe": 1908,
+                    "severe": 284,
+                    "severe_ratio": 0.12956204379562045
+                },
+                "best_cv_score": 0.7301627736859985,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.6712328767123288,
+                    "roc_auc": 0.7120782087669505,
+                    "pr_auc": 0.42486050206643683,
+                    "f1": 0.3877551020408163
+                },
+                "confusion_matrix": [
+                    [
+                        207,
+                        95
+                    ],
+                    [
+                        25,
+                        38
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p00050.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p00050.csv"
+            },
+            {
+                "threshold": 0.001,
+                "threshold_pct": "0.1000%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1408,
+                    "severe": 53
+                },
+                "test_class_distribution": {
+                    "non_severe": 343,
+                    "severe": 22
+                },
+                "overall_class_distribution": {
+                    "non_severe": 2104,
+                    "severe": 88,
+                    "severe_ratio": 0.040145985401459854
+                },
+                "best_cv_score": 0.8179331438103301,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.810958904109589,
+                    "roc_auc": 0.8291810230585741,
+                    "pr_auc": 0.47641204708331397,
+                    "f1": 0.31683168316831684
+                },
+                "confusion_matrix": [
+                    [
+                        280,
+                        63
+                    ],
+                    [
+                        6,
+                        16
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p00100.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p00100.csv"
+            },
+            {
+                "threshold": 0.005,
+                "threshold_pct": "0.5000%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1455,
+                    "severe": 6
+                },
+                "test_class_distribution": {
+                    "non_severe": 358,
+                    "severe": 7
+                },
+                "overall_class_distribution": {
+                    "non_severe": 2177,
+                    "severe": 15,
+                    "severe_ratio": 0.006843065693430657
+                },
+                "best_cv_score": 0.9934707903780069,
+                "best_params": {
+                    "solver": "liblinear",
+                    "penalty": "l1",
+                    "max_iter": 2000,
+                    "class_weight": "balanced",
+                    "C": 0.01
+                },
+                "test_metrics": {
+                    "accuracy": 0.9205479452054794,
+                    "roc_auc": 0.9766560255387072,
+                    "pr_auc": 0.2996289424860854,
+                    "f1": 0.32558139534883723
+                },
+                "confusion_matrix": [
+                    [
+                        329,
+                        29
+                    ],
+                    [
+                        0,
+                        7
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p00500.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p00500.csv"
+            },
+            {
+                "threshold": 0.01,
+                "threshold_pct": "1.0000%",
+                "is_most_balanced_threshold": false,
+                "train_size": 1461,
+                "val_size": 366,
+                "test_size": 365,
+                "train_class_distribution": {
+                    "non_severe": 1457,
+                    "severe": 4
+                },
+                "test_class_distribution": {
+                    "non_severe": 358,
+                    "severe": 7
+                },
+                "overall_class_distribution": {
+                    "non_severe": 2180,
+                    "severe": 12,
+                    "severe_ratio": 0.005474452554744526
+                },
+                "best_cv_score": NaN,
+                "best_params": {
+                    "solver": "saga",
+                    "penalty": "l2",
+                    "max_iter": 1000,
+                    "class_weight": "balanced",
+                    "C": 1
+                },
+                "test_metrics": {
+                    "accuracy": 0.9808219178082191,
+                    "roc_auc": 0.9616919393455706,
+                    "pr_auc": 0.40888428511379327,
+                    "f1": 0.0
+                },
+                "confusion_matrix": [
+                    [
+                        358,
+                        0
+                    ],
+                    [
+                        7,
+                        0
+                    ]
+                ],
+                "model_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\models\\trained\\county_models\\Orange_County_FL_severe_logreg_0p01000.pkl",
+                "predictions_path": "C:\\Users\\Owner\\.cursor\\ABT Global\\Abt_Global_1B\\results\\county_models\\Orange_County_FL_severe_2022_predictions_0p01000.csv"
+            }
+        ]
+    }
+}
