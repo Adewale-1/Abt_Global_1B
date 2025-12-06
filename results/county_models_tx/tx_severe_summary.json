@@ -1,0 +1,214 @@
+{
+    "Harris_County_TX": {
+        "best_threshold": 0.0002,
+        "severe_ratio": 0.4425182481751825,
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l1",
+            "max_iter": 1000,
+            "class_weight": "balanced",
+            "C": 100
+        },
+        "best_cv_score": 0.7285979118403615,
+        "test_metrics": {
+            "accuracy": 0.6821917808219178,
+            "roc_auc": 0.8037057676232935,
+            "pr_auc": 0.530883490830553,
+            "f1": 0.5084745762711864
+        },
+        "report": {
+            "0": {
+                "precision": 0.9310344827586207,
+                "recall": 0.6494845360824743,
+                "f1-score": 0.7651821862348178,
+                "support": 291.0
+            },
+            "1": {
+                "precision": 0.37037037037037035,
+                "recall": 0.8108108108108109,
+                "f1-score": 0.5084745762711864,
+                "support": 74.0
+            },
+            "accuracy": 0.6821917808219178,
+            "macro avg": {
+                "precision": 0.6507024265644955,
+                "recall": 0.7301476734466426,
+                "f1-score": 0.6368283812530021,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 0.8173655942196328,
+                "recall": 0.6821917808219178,
+                "f1-score": 0.7131373557216433,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                189,
+                102
+            ],
+            [
+                14,
+                60
+            ]
+        ],
+        "threshold_results": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 559,
+                "severe": 1633,
+                "severe_ratio": 0.7449817518248175,
+                "balance_score": 0.24498175182481752
+            },
+            {
+                "threshold": 0.00015,
+                "non_severe": 965,
+                "severe": 1227,
+                "severe_ratio": 0.5597627737226277,
+                "balance_score": 0.05976277372262773
+            },
+            {
+                "threshold": 0.0002,
+                "non_severe": 1222,
+                "severe": 970,
+                "severe_ratio": 0.4425182481751825,
+                "balance_score": 0.05748175182481752
+            },
+            {
+                "threshold": 0.00025,
+                "non_severe": 1415,
+                "severe": 777,
+                "severe_ratio": 0.354470802919708,
+                "balance_score": 0.145529197080292
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 1578,
+                "severe": 614,
+                "severe_ratio": 0.2801094890510949,
+                "balance_score": 0.2198905109489051
+            },
+            {
+                "threshold": 0.0004,
+                "non_severe": 1751,
+                "severe": 441,
+                "severe_ratio": 0.2011861313868613,
+                "balance_score": 0.2988138686131387
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 1846,
+                "severe": 346,
+                "severe_ratio": 0.15784671532846714,
+                "balance_score": 0.34215328467153283
+            }
+        ]
+    },
+    "Bexar_County_TX": {
+        "best_threshold": 0.0001,
+        "severe_ratio": 0.24817518248175183,
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l1",
+            "max_iter": 1000,
+            "class_weight": "balanced",
+            "C": 1
+        },
+        "best_cv_score": 0.7625614447000115,
+        "test_metrics": {
+            "accuracy": 0.7205479452054795,
+            "roc_auc": 0.7227700068791562,
+            "pr_auc": 0.5585251977775355,
+            "f1": 0.5096153846153846
+        },
+        "report": {
+            "0": {
+                "precision": 0.8235294117647058,
+                "recall": 0.7865168539325843,
+                "f1-score": 0.8045977011494253,
+                "support": 267.0
+            },
+            "1": {
+                "precision": 0.4818181818181818,
+                "recall": 0.5408163265306123,
+                "f1-score": 0.5096153846153846,
+                "support": 98.0
+            },
+            "accuracy": 0.7205479452054795,
+            "macro avg": {
+                "precision": 0.6526737967914438,
+                "recall": 0.6636665902315984,
+                "f1-score": 0.657106542882405,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 0.7317822870119406,
+                "recall": 0.7205479452054795,
+                "f1-score": 0.725396969586861,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                210,
+                57
+            ],
+            [
+                45,
+                53
+            ]
+        ],
+        "threshold_results": [
+            {
+                "threshold": 0.0001,
+                "non_severe": 1648,
+                "severe": 544,
+                "severe_ratio": 0.24817518248175183,
+                "balance_score": 0.25182481751824815
+            },
+            {
+                "threshold": 0.00015,
+                "non_severe": 1833,
+                "severe": 359,
+                "severe_ratio": 0.16377737226277372,
+                "balance_score": 0.3362226277372263
+            },
+            {
+                "threshold": 0.0002,
+                "non_severe": 1915,
+                "severe": 277,
+                "severe_ratio": 0.12636861313868614,
+                "balance_score": 0.37363138686131386
+            },
+            {
+                "threshold": 0.00025,
+                "non_severe": 1969,
+                "severe": 223,
+                "severe_ratio": 0.10173357664233576,
+                "balance_score": 0.39826642335766427
+            },
+            {
+                "threshold": 0.0003,
+                "non_severe": 2001,
+                "severe": 191,
+                "severe_ratio": 0.08713503649635036,
+                "balance_score": 0.41286496350364965
+            },
+            {
+                "threshold": 0.0004,
+                "non_severe": 2049,
+                "severe": 143,
+                "severe_ratio": 0.06523722627737226,
+                "balance_score": 0.4347627737226277
+            },
+            {
+                "threshold": 0.0005,
+                "non_severe": 2078,
+                "severe": 114,
+                "severe_ratio": 0.05200729927007299,
+                "balance_score": 0.44799270072992703
+            }
+        ]
+    }
+}
