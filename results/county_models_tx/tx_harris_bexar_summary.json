@@ -1,0 +1,112 @@
+{
+    "Harris_County_TX": {
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l1",
+            "max_iter": 2000,
+            "class_weight": "balanced",
+            "C": 0.01
+        },
+        "best_cv_score": 0.9967265078800805,
+        "test_metrics": {
+            "accuracy": 0.9753424657534246,
+            "roc_auc": 0.9875690607734806,
+            "pr_auc": 0.9998179240724462,
+            "f1": 0.9874125874125874,
+            "precision": 1.0,
+            "recall": 0.9751381215469613
+        },
+        "report": {
+            "0": {
+                "precision": 0.25,
+                "recall": 1.0,
+                "f1-score": 0.4,
+                "support": 3.0
+            },
+            "1": {
+                "precision": 1.0,
+                "recall": 0.9751381215469613,
+                "f1-score": 0.9874125874125874,
+                "support": 362.0
+            },
+            "accuracy": 0.9753424657534246,
+            "macro avg": {
+                "precision": 0.625,
+                "recall": 0.9875690607734806,
+                "f1-score": 0.6937062937062937,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 0.9938356164383562,
+                "recall": 0.9753424657534246,
+                "f1-score": 0.9825845387489223,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                3,
+                0
+            ],
+            [
+                9,
+                353
+            ]
+        ]
+    },
+    "Bexar_County_TX": {
+        "best_params": {
+            "solver": "liblinear",
+            "penalty": "l1",
+            "max_iter": 2000,
+            "class_weight": "balanced",
+            "C": 0.01
+        },
+        "best_cv_score": 0.9916270184544406,
+        "test_metrics": {
+            "accuracy": 0.9616438356164384,
+            "roc_auc": 0.0,
+            "pr_auc": 0.0,
+            "f1": 0.9804469273743017,
+            "precision": 1.0,
+            "recall": 0.9616438356164384
+        },
+        "report": {
+            "0": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1-score": 0.0,
+                "support": 0.0
+            },
+            "1": {
+                "precision": 1.0,
+                "recall": 0.9616438356164384,
+                "f1-score": 0.9804469273743017,
+                "support": 365.0
+            },
+            "accuracy": 0.9616438356164384,
+            "macro avg": {
+                "precision": 0.5,
+                "recall": 0.4808219178082192,
+                "f1-score": 0.49022346368715086,
+                "support": 365.0
+            },
+            "weighted avg": {
+                "precision": 1.0,
+                "recall": 0.9616438356164384,
+                "f1-score": 0.9804469273743016,
+                "support": 365.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                0,
+                0
+            ],
+            [
+                14,
+                351
+            ]
+        ]
+    }
+}
