@@ -512,3 +512,20 @@ Good separation indicates the model distinguishes classes well.
     -   **ROC AUC**: 0.0000 (Single-class test set)
     -   **F1 Score**: 0.9986
     -   **Note**: Identical situation—2022 data for King County only contained outage days.
+
+## San Diego and San Francisco County
+
+#### 3. San Diego County, CA
+-   **Best Hyperparameters**: `solver='lbfgs'`, `penalty='l2'`, `max_iter=100`, `class_weight='balanced'`, `C=1000`
+-   **Test Performance (2022)**:
+    -   **Accuracy**: 0.7761
+    -   **ROC AUC**: 0.3892
+    -   **F1 Score**: 0.0 (Due to severe class imbalance)
+
+#### 4. San Francisco County, CA
+-   **Best Hyperparameters**: `solver='lbfgs'`, `penalty='l2'`, `max_iter=100`, `class_weight='balanced'`, `C=0.1`
+-   **Test Performance (2022)**:
+    -   **Accuracy**: 0.9397
+    -   **ROC AUC**: 0.4751
+    -   **F1 Score**: 0.0 (Severe class imbalance)
+
